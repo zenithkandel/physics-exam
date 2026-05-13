@@ -122,36 +122,6 @@ function navigateTo(page) {
   if (!mainContent) return;
   mainContent.innerHTML = "";
 
-  if (page === "quiz" && quizTabLeft && quizActive) {
-    mainContent.innerHTML = `
-    <div class="card">
-      <div class="card-header">
-        <div>
-          <div class="card-title">Quiz Mode</div>
-          <div class="card-subtitle">Practice MCQs with 20-second timer</div>
-        </div>
-        <button class="btn btn-outline" id="pauseBtn" onclick="togglePause()">
-          <i class="fa-light fa-pause"></i> Pause
-        </button>
-      </div>
-      <div class="quiz-panel" id="quizContainer">
-        <div class="blur-overlay" id="blurOverlay"></div>
-        <div class="resume-modal show" id="resumeModal">
-          <i class="fa-light fa-gamepad-modern"></i>
-          <h3>Welcome Back!</h3>
-          <p>Your quiz progress has been saved.</p>
-          <div class="progress-info" id="resumeProgress">Question \${currentQIndex + 1} of \${roundQuestions.length}</div>
-          <div class="actions">
-            <button class="btn btn-outline" onclick="restartQuiz()">Start New</button>
-            <button class="btn btn-primary" onclick="resumeQuizFromModal()">Resume Quiz</button>
-          </div>
-        </div>
-      </div>
-    </div>`;
-    updateMath();
-    return;
-  }
-
   switch (page) {
     case "dashboard": renderDashboard(); break;
     case "quiz": renderQuiz(); break;
@@ -265,32 +235,22 @@ function renderQuiz() {
           <p>Quiz Paused</p>
         </div>
         <div class="quiz-header">
-          <div class="q-progress"><span class="q-number" id="qNumber">Q 1/30</span><div class="q-progress-bar"><div class="q-progress-fill" id="qProgressFill" style="width:0%"></div></div></div>
+          <div class="q-progress"><span class="q-number" id="qNumber">Q 1/${allQuestions.length}</span><div class="q-progress-bar"><div class="q-progress-fill" id="qProgressFill" style="width:0%"></div></div></div>
           <span class="q-timer" id="qTimer">20s</span>
         </div>
         <div class="question-text" id="questionText">Loading question...</div>
         <div class="options-grid" id="optionsGrid"></div>
         <div class="quiz-actions">
           <button class="btn btn-outline" id="skipBtn">Skip</button>
-          <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+          <button class="btn btn-primary" onclick="startNewQuiz()">New Quiz</button>
         </div>
       </div>
       <div class="score-screen" id="scoreScreen" style="display:none;">
         <i class="fa-light fa-trophy"></i>
         <h3>Quiz Complete!</h3>
         <p id="scoreMessage">Great effort!</p>
-        <div class="score-number" id="scoreNumber">0/30</div>
-        <button class="btn btn-primary" onclick="restartQuiz()">Try Again</button>
-      </div>
-      <div class="resume-modal" id="resumeModal" style="display:none;">
-        <i class="fa-light fa-gamepad-modern"></i>
-        <h3>Welcome Back!</h3>
-        <p>Your quiz progress has been saved.</p>
-        <div class="progress-info" id="resumeProgress">Question 5 of 30</div>
-        <div class="actions">
-          <button class="btn btn-outline" onclick="restartQuiz()">Start New</button>
-          <button class="btn btn-primary" onclick="resumeQuiz()">Resume Quiz</button>
-        </div>
+        <div class="score-number" id="scoreNumber">0/${allQuestions.length}</div>
+        <button class="btn btn-primary" onclick="startNewQuiz()">Try Again</button>
       </div>
     </div>`;
   prepareRound();
@@ -301,7 +261,8 @@ function renderQuiz() {
 function prepareRound() {
   roundQuestions = shuffle(allQuestions).slice(0, questionsPerRound);
   currentQIndex = 0; correctCount = 0; totalAttempted = 0; streak = 0; quizActive = true;
-  quizTabLeft = false; isQuizPaused = false;
+  quizTabLeft = false; isQuizPaused = false; timeLeft = 20;
+  saveQuizState();
   const scoreScreen = getEl("scoreScreen"), quizContainer = getEl("quizContainer"), skipBtn = getEl("skipBtn"), blurOverlay = getEl("blurOverlay"), pauseBtn = getEl("pauseBtn");
   if (scoreScreen) scoreScreen.style.display = "none";
   if (quizContainer) quizContainer.style.display = "block";
@@ -310,6 +271,40 @@ function prepareRound() {
   if (pauseBtn) pauseBtn.innerHTML = '<i class="fa-light fa-pause"></i> Pause';
   updateStats();
   renderQuestion();
+}
+
+function startNewQuiz() {
+  clearInterval(timerInterval);
+  prepareRound();
+}
+
+function saveQuizState() {
+  const state = {
+    currentQIndex,
+    correctCount,
+    totalAttempted,
+    streak,
+    roundQuestions: roundQuestions.map(q => q.q),
+    timeLeft,
+    isQuizPaused
+  };
+  localStorage.setItem("mathscrash_quizState", JSON.stringify(state));
+}
+
+function loadQuizState() {
+  const saved = localStorage.getItem("mathscrash_quizState");
+  if (saved) {
+    try {
+      return JSON.parse(saved);
+    } catch (e) {
+      return null;
+    }
+  }
+  return null;
+}
+
+function clearQuizState() {
+  localStorage.removeItem("mathscrash_quizState");
 }
 
 function renderQuestion() {
