@@ -12,7 +12,7 @@
       "hint": "Union contains all elements from both sets."
     },
     {
-      "q": "The domain of the function \\( f(x) = \\( \\sqrt{(x-2)} \\) \\) is:",
+      "q": "The domain of the function \\( f(x) = \\( \\sqrt{(x-2)} \\) is:",
       "opts": [
         "\\( x \\ge 2 \\)",
         "\\( x \\le 2 \\)",
@@ -671,6 +671,39 @@
         "<strong>Remember:</strong> sin⁻¹x ≠ 1/sin x (that's csc)",
         "<strong>Remember:</strong> AM ≥ GM ≥ HM always",
         "<strong>Remember:</strong> |z| is always non-negative"
+      ]
+    },
+    {
+      "title": "Calculus: Limits & Derivatives",
+      "icon": "calculator",
+      "items": [
+        "<strong>Limits:</strong> \\( \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1 \\)",
+        "<strong>Limits:</strong> \\( \\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1 \\)",
+        "<strong>Chain Rule:</strong> \\( \\frac{d}{dx}[f(g(x))] = f'(g(x))g'(x) \\)",
+        "<strong>Product Rule:</strong> \\( \\frac{d}{dx}(uv) = u\\frac{dv}{dx} + v\\frac{du}{dx} \\)",
+        "<strong>Quotient Rule:</strong> \\( \\frac{d}{dx}(\\frac{u}{v}) = \\frac{v\\frac{du}{dx} - u\\frac{dv}{dx}}{v^2} \\)"
+      ]
+    },
+    {
+      "title": "Analytic Geometry (Straight Lines)",
+      "icon": "chart-line",
+      "items": [
+        "<strong>Distance between points:</strong> \\( d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} \\)",
+        "<strong>Mid-point formula:</strong> \\( (\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}) \\)",
+        "<strong>Slope of line:</strong> \\( m = \\frac{y_2-y_1}{x_2-x_1} = -\\frac{A}{B} \\)",
+        "<strong>Angle between lines:</strong> \\( \\tan \\theta = \\pm \\frac{m_1-m_2}{1+m_1 m_2} \\)",
+        "<strong>Perpendicular Distance:</strong> \\( d = \\frac{|Ax_1+By_1+C|}{\\sqrt{A^2+B^2}} \\)"
+      ]
+    },
+    {
+      "title": "Vectors & 3D Geometry",
+      "icon": "arrow-up-right",
+      "items": [
+        "<strong>Dot Product:</strong> \\( \\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos \\theta \\)",
+        "<strong>Cross Product:</strong> \\( |\\vec{a} \\times \\vec{b}| = |\\vec{a}||\\vec{b}|\\sin \\theta \\)",
+        "<strong>Direction Cosines:</strong> \\( l = \\cos \\alpha, m = \\cos \\beta, n = \\cos \\gamma \\)",
+        "<strong>Relation of DC:</strong> \\( l^2 + m^2 + n^2 = 1 \\)",
+        "<strong>Collinear vectors condition:</strong> \\( \\vec{a} = k\\vec{b} \\)"
       ]
     }
   ],
