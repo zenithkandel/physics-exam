@@ -45,15 +45,15 @@ function updateStats() {
 function resetStats() {
   totalXP = 0; streak = 0; bestStreak = 0; correctCount = 0; totalAttempted = 0; currentQIndex = 0; quizActive = false;
   clearInterval(timerInterval);
-  localStorage.removeItem("chemcrash_xp");
-  localStorage.removeItem("chemcrash_bestStreak");
+  localStorage.removeItem("mathscrash_xp");
+  localStorage.removeItem("mathscrash_bestStreak");
   updateStats();
   showToast("Profile reset successfully!", "success");
 }
 
 function resetSyllabus() {
   completedTopics = {};
-  localStorage.removeItem("chemcrash_completed");
+  localStorage.removeItem("mathscrash_completed");
   renderSyllabus();
   showToast("Syllabus progress cleared!", "success");
 }
@@ -80,7 +80,7 @@ function shuffle(arr) {
 }
 
 function navigateTo(page) {
-  sessionStorage.setItem("chemcrash_currentPage", page);
+  sessionStorage.setItem("mathscrash_currentPage", page);
   document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("active"));
   document.querySelectorAll(".bottom-nav-item").forEach(item => item.classList.remove("active"));
   document.querySelector(`.sidebar .nav-item[data-page="${page}"]`)?.classList.add("active");
