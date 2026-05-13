@@ -141,9 +141,7 @@ function navigateTo(page) {
     case "flashcards": renderFlashcardsPage(); break;
     case "syllabus": renderSyllabus(); break;
     case "cheatsheet": renderCheatsheet(); break;
-    case "modelpaper": renderModelPaper(); break;
     case "tips": renderTips(); break;
-    case "practicals": renderPracticals(); break;
     case "settings": renderSettings(); break;
   }
   updateMath();
@@ -173,94 +171,61 @@ function resumeQuizFromModal() {
 }
 
 function renderDashboard() {
-  const meta = syllabusData.meta || {};
-  const highTopics = syllabusData.high_weight_topics || [];
-  const studyStrat = syllabusData.study_strategy || {};
-
   getEl("mainContent").innerHTML = `
     <div class="dashboard-header">
       <h1>Dashboard</h1>
-      <p>Track your mathematics exam preparation</p>
+      <p>Welcome to MathsCrash! Here is an overview of what you can find in each section:</p>
     </div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-card-top">
-          <span class="stat-card-label">Total XP</span>
-          <div class="stat-card-icon green"><i class="fa-light fa-bolt"></i></div>
-        </div>
-        <div class="stat-card-value" id="totalXP">${totalXP}</div>
-        <div class="stat-card-sub">Points earned</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-top">
-          <span class="stat-card-label">Streak</span>
-          <div class="stat-card-icon orange"><i class="fa-light fa-fire-flame-curved"></i></div>
-        </div>
-        <div class="stat-card-value" id="streakCount">${streak}</div>
-        <div class="stat-card-sub">Correct in a row</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-top">
-          <span class="stat-card-label">Accuracy</span>
-          <div class="stat-card-icon blue"><i class="fa-light fa-bullseye"></i></div>
-        </div>
-        <div class="stat-card-value" id="accuracyDisplay">${totalAttempted > 0 ? Math.round((correctCount / totalAttempted) * 100) : 0}%</div>
-        <div class="stat-card-sub">Questions answered</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card-top">
-          <span class="stat-card-label">Progress</span>
-          <div class="stat-card-icon purple"><i class="fa-light fa-chart-line-up"></i></div>
-        </div>
-        <div class="stat-card-value" id="questionsDone">${totalAttempted}/${allQuestions.length}</div>
-        <div class="stat-card-sub">Questions completed</div>
-      </div>
-    </div>
-    <div class="overview-grid">
-      <div class="overview-card">
-        <h4>Exam Information</h4>
-        <div class="overview-list">
-          <div class="overview-list-item"><span>Board</span><span>${meta.board || 'NEB'}</span></div>
-          <div class="overview-list-item"><span>Subject</span><span>${meta.exam_context || 'Mathematics'}</span></div>
-          <div class="overview-list-item"><span>Academic Year</span><span>${meta.academic_year_bs || '2082'}</span></div>
-          <div class="overview-list-item"><span>Working Hours</span><span>${meta.notes?.match(/\d+/)?.[0] || '160'}</span></div>
-        </div>
-      </div>
-      <div class="overview-card">
-        <h4>Exam Breakdown</h4>
-        <div class="overview-list">
-          <div class="overview-list-item"><span>Theory</span><span>100 marks</span></div>
-          <div class="overview-list-item"><span>Passing Target</span><span>35+ marks</span></div>
-          <div class="overview-list-item"><span>Total Questions</span><span>${allQuestions.length}</span></div>
-          <div class="overview-list-item"><span>Quiz Questions</span><span>50 MCQs</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="content-grid">
-      <div class="card">
-        <div class="card-header"><div><div class="card-title">High Priority Topics</div><div class="card-subtitle">Focus on these for maximum marks</div></div></div>
-        <div class="card-body">
-          <div class="table-container">
-            <table class="table">
-              <thead><tr><th>Topic</th><th>Difficulty</th><th>Frequency</th></tr></thead>
-              <tbody>
-                ${highTopics.slice(0, 6).map(t => `<tr><td>${t.topic}</td><td><span class="status-dot ${t.difficulty === 'High' ? 'red' : 'orange'}"></span>${t.difficulty}</td><td>${t.estimated_frequency}</td></tr>`).join('')}
-              </tbody>
-            </table>
+    <div class="content-grid" style="grid-template-columns: 1fr;">
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><i class="fa-light fa-gamepad-modern"></i> Quiz Mode</div>
+            <div class="card-subtitle">Test your knowledge with timed Multiple Choice Questions. Sharpen your speed and accuracy.</div>
           </div>
         </div>
       </div>
-      <div>
-        <div class="card side-card">
-          <div class="side-card-header"><div class="side-card-title">Study Strategy</div></div>
-          <div class="progress-item"><div class="progress-item-header"><span class="progress-item-label">Finish First</span></div><div class="progress-bar"><div class="progress-bar-fill" style="width:100%"></div></div></div>
-          ${(studyStrat.chapters_to_finish_first || []).slice(0, 3).map(c => `<div class="progress-item"><div class="progress-item-header"><span class="progress-item-label">${c}</span></div></div>`).join('')}
+      
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><i class="fa-light fa-cards"></i> Flash Cards</div>
+            <div class="card-subtitle">Quickly review concepts with interactive flip cards. Tap a card to reveal the answer behind it.</div>
+          </div>
         </div>
-        <div class="card cta-card">
-          <h4>Ready to Practice?</h4>
-          <p>Test your knowledge with our quiz mode. ${questionsPerRound} questions, 20 seconds each.</p>
-          <button class="cta-btn" onclick="navigateTo('quiz')">Start Quiz</button>
+      </div>
+
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><i class="fa-light fa-book-open-cover"></i> Syllabus</div>
+            <div class="card-subtitle">Browse through the entire NEB Grade 11 Mathematics curriculum. Track which chapters and topics you have already completed.</div>
+          </div>
         </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><i class="fa-light fa-file-edit"></i> Cheat Sheet</div>
+            <div class="card-subtitle">Access your quick reference to key formulas, rules, and mathematical principles without reading through books.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-header">
+          <div>
+            <div class="card-title"><i class="fa-light fa-lightbulb-on"></i> Exam Tips</div>
+            <div class="card-subtitle">General advice, study strategies, and best practices to maximize your scores in your final examination.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card cta-card">
+        <h4>Ready to begin?</h4>
+        <p>Start your practice journey right now.</p>
+        <button class="cta-btn" onclick="navigateTo('quiz')">Go to Quiz Mode</button>
       </div>
     </div>`;
 }
@@ -647,24 +612,6 @@ function renderCheatsheet() {
   }
 }
 
-function renderModelPaper() {
-  getEl("mainContent").innerHTML = `
-    <div class="card">
-      <div class="card-header"><div><div class="card-title">Model Paper 2083</div><div class="card-subtitle">Predicted question pattern based on past papers</div></div></div>
-      <div class="model-paper-content" id="modelPaperContent"></div>
-    </div>`;
-  const el = getEl("modelPaperContent");
-  if (el && modelPaperData.groups) {
-    let html = "";
-    modelPaperData.groups.forEach(group => {
-      html += `<h4>${group.title}</h4>`;
-      if (group.questions) html += `<ol>${group.questions.map(q => `<li>${q}</li>`).join('')}</ol>`;
-      if (group.description) html += `<p><strong>Key topics:</strong> ${group.description}</p>`;
-    });
-    el.innerHTML = html;
-  }
-}
-
 function renderTips() {
   getEl("mainContent").innerHTML = `
     <div class="card">
@@ -679,25 +626,6 @@ function renderTips() {
       div.className = "tip-section";
       div.innerHTML = `<h3>${tip.title}</h3>` + tip.items.map(item => `<div class="tip-item"><span class="tip-dot"></span>${item}</div>`).join("");
       el.appendChild(div);
-    });
-  }
-}
-
-function renderPracticals() {
-  const practicals = syllabusData.practical_topics || [];
-  getEl("mainContent").innerHTML = `
-    <div class="card">
-      <div class="card-header"><div><div class="card-title">Practical Experiments</div><div class="card-subtitle">Lab work for 25 marks</div></div></div>
-      <div class="practicals-content" id="practicalsContent"></div>
-    </div>`;
-  const el = getEl("practicalsContent");
-  if (el) {
-    el.innerHTML = `<h4>Practical Topics (${practicals.length} Experiments)</h4>`;
-    practicals.forEach(p => {
-      el.innerHTML += `<div class="experiment-card">
-        <div class="experiment-name">${p.experiment_name}</div>
-        <div class="experiment-concepts">${(p.key_concepts || []).map(c => `<span class="concept-tag">${c}</span>`).join('')}</div>
-      </div>`;
     });
   }
 }
