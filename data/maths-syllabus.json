@@ -18,7 +18,7 @@
         "1.4 Find domain and range of a function.",
         "1.5 Find inverse function and calculate composite function of given functions.",
         "1.6 Define odd and even functions, periodicity of a function, and monotonicity of a function.",
-        "1.7 Sketch graphs of Quadratic, Cubic and rational functions of the form 1/(ax + b) where a ≠ 0, Trigonometric (a sin bx and a cos bx), exponential (eˣ), logarithmic function (ln x).",
+        "1.7 Sketch graphs of Quadratic, Cubic and rational functions of the form \\( \\frac{1}{ax+b} \\) where a ≠ 0, Trigonometric (\\( a \\sin bx \\) and \\( a \\cos bx \\)), exponential (\\( e^x \\)), logarithmic function (\\( \\ln x \\)).",
         "1.8 Define and classify sequence and series.",
         "1.9 Solve the problems related to arithmetic, geometric and harmonic sequences and series.",
         "1.10 Establish relation among A.M, G.M and H.M.",
@@ -49,8 +49,8 @@
       "topics": [
         "3.1 Find the length of perpendicular from a given point to a given line.",
         "3.2 Find the equation of bisectors of the angles between two straight lines.",
-        "3.3 Write the condition of general equation of second degree in x and y to represent a pair of straight lines.",
-        "3.4 Find angle between pair of lines and bisectors of the angles between pair of lines given by homogeneous second degree equation in x and y.",
+        "3.3 Write the condition of general equation of second degree in \\(x\\) and \\(y\\) to represent a pair of straight lines.",
+        "3.4 Find angle between pair of lines and bisectors of the angles between pair of lines given by homogeneous second degree equation in \\(x\\) and \\(y\\).",
         "3.5 Find the distance between two points in space, and direction cosines and ratios of a line."
       ]
     },
