@@ -1,117 +1,116 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MathsCrash 2083 | Mathematics Exam Prep</title>
     <script src="https://zenithkandel.com.np/fontawesome/zenith-icons.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <div id="toast" class="feedback-toast" style="display: none"></div>
 
     <div class="dashboard">
-        <aside class="sidebar">
-            <div class="sidebar-logo">
-<div class="sidebar-logo-icon">
-                    <i class="fa-light fa-calculator"></i>
-                </div>
-                <div class="sidebar-logo-text">
-                    MathsCrash
-                    <span>2083 Edition</span>
-                </div>
-                <div class="sidebar-logo-text">
-                    MathsCrash
-                    <span>2083 Edition</span>
-                </div>
-            </div>
-            <nav class="sidebar-nav">
-                <div class="nav-item active" data-page="dashboard">
-                    <i class="fa-light fa-gauge-simple"></i>
-                    Dashboard
-                </div>
-                <div class="nav-item" data-page="quiz">
-                    <i class="fa-light fa-gamepad-modern"></i>
-                    Quiz Mode
-                </div>
-                <div class="nav-item" data-page="flashcards">
-                    <i class="fa-light fa-cards"></i>
-                    Flash Cards
-                </div>
-                <div class="nav-item" data-page="syllabus">
-                    <i class="fa-light fa-book-open-cover"></i>
-                    Syllabus
-                </div>
-                <div class="nav-item" data-page="cheatsheet">
-                    <i class="fa-light fa-file-edit"></i>
-                    Cheat Sheet
-                </div>
-                <div class="nav-item" data-page="modelpaper">
-                    <i class="fa-light fa-file-spreadsheet"></i>
-                    Model Paper
-                </div>
-                <div class="nav-item" data-page="tips">
-                    <i class="fa-light fa-lightbulb-on"></i>
-                    Exam Tips
-                </div>
-                <div class="nav-item" data-page="practicals">
-                    <i class="fa-light fa-vial"></i>
-                    Practicals
-                </div>
-                <div class="nav-divider"></div>
-                <div class="nav-item" data-page="settings">
-                    <i class="fa-light fa-gear"></i>
-                    Settings
-                </div>
-            </nav>
-        </aside>
-
-        <div class="main-wrapper">
-            <header class="topbar">
-                <div class="topbar-left">
-                    <h1 class="topbar-title" id="topbar-title">Dashboard</h1>
-                </div>
-                <div class="topbar-right">
-                    <div class="search-box">
-                        <i class="fa-light fa-magnifying-glass"></i>
-                        <input type="text" id="searchInput" placeholder="Search topics, chapters...">
-                        <div class="search-results" id="searchResults"></div>
-                    </div>
-                    <button class="icon-btn" id="notifBtn">
-                        <i class="fa-light fa-bell"></i>
-                    </button>
-                    <div class="avatar" id="userAvatar">ST</div>
-                </div>
-            </header>
-
-            <main class="main-content" id="mainContent">
-            </main>
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <div class="sidebar-logo-icon">
+            <i class="fa-light fa-calculator"></i>
+          </div>
+          <div class="sidebar-logo-text">
+            MathsCrash
+            <span>2083 Edition</span>
+          </div>
         </div>
+        <nav class="sidebar-nav">
+          <div class="nav-item active" data-page="dashboard">
+            <i class="fa-light fa-gauge-simple"></i>
+            Dashboard
+          </div>
+          <div class="nav-item" data-page="quiz">
+            <i class="fa-light fa-gamepad-modern"></i>
+            Quiz Mode
+          </div>
+          <div class="nav-item" data-page="flashcards">
+            <i class="fa-light fa-cards"></i>
+            Flash Cards
+          </div>
+          <div class="nav-item" data-page="syllabus">
+            <i class="fa-light fa-book-open-cover"></i>
+            Syllabus
+          </div>
+          <div class="nav-item" data-page="cheatsheet">
+            <i class="fa-light fa-file-edit"></i>
+            Cheat Sheet
+          </div>
+          <div class="nav-item" data-page="modelpaper">
+            <i class="fa-light fa-file-spreadsheet"></i>
+            Model Paper
+          </div>
+          <div class="nav-item" data-page="tips">
+            <i class="fa-light fa-lightbulb-on"></i>
+            Exam Tips
+          </div>
+          <div class="nav-item" data-page="practicals">
+            <i class="fa-light fa-vial"></i>
+            Practicals
+          </div>
+          <div class="nav-divider"></div>
+          <div class="nav-item" data-page="settings">
+            <i class="fa-light fa-gear"></i>
+            Settings
+          </div>
+        </nav>
+      </aside>
+
+      <div class="main-wrapper">
+        <header class="topbar">
+          <div class="topbar-left">
+            <h1 class="topbar-title" id="topbar-title">Dashboard</h1>
+          </div>
+          <div class="topbar-right">
+            <div class="search-box">
+              <i class="fa-light fa-magnifying-glass"></i>
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Search topics, chapters..."
+              />
+              <div class="search-results" id="searchResults"></div>
+            </div>
+            <button class="icon-btn" id="notifBtn">
+              <i class="fa-light fa-bell"></i>
+            </button>
+            <div class="avatar" id="userAvatar">ST</div>
+          </div>
+        </header>
+
+        <main class="main-content" id="mainContent"></main>
+      </div>
     </div>
 
     <nav class="bottom-nav">
-        <div class="bottom-nav-item active" data-page="dashboard">
-            <i class="fa-light fa-gauge-simple"></i>
-            <span>Home</span>
-        </div>
-        <div class="bottom-nav-item" data-page="quiz">
-            <i class="fa-light fa-gamepad-modern"></i>
-            <span>Quiz</span>
-        </div>
-        <div class="bottom-nav-item" data-page="flashcards">
-            <i class="fa-light fa-cards"></i>
-            <span>Cards</span>
-        </div>
-        <div class="bottom-nav-item" data-page="syllabus">
-            <i class="fa-light fa-book-open-cover"></i>
-            <span>Syllabus</span>
-        </div>
-        <div class="bottom-nav-item" data-page="cheatsheet">
-            <i class="fa-light fa-file-edit"></i>
-            <span>Cheat</span>
-        </div>
+      <div class="bottom-nav-item active" data-page="dashboard">
+        <i class="fa-light fa-gauge-simple"></i>
+        <span>Home</span>
+      </div>
+      <div class="bottom-nav-item" data-page="quiz">
+        <i class="fa-light fa-gamepad-modern"></i>
+        <span>Quiz</span>
+      </div>
+      <div class="bottom-nav-item" data-page="flashcards">
+        <i class="fa-light fa-cards"></i>
+        <span>Cards</span>
+      </div>
+      <div class="bottom-nav-item" data-page="syllabus">
+        <i class="fa-light fa-book-open-cover"></i>
+        <span>Syllabus</span>
+      </div>
+      <div class="bottom-nav-item" data-page="cheatsheet">
+        <i class="fa-light fa-file-edit"></i>
+        <span>Cheat</span>
+      </div>
     </nav>
 
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>
