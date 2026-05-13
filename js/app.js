@@ -16,18 +16,19 @@ function getEl(id) { return document.getElementById(id); }
 
 async function loadData() {
   try {
-    const [qRes, dRes] = await Promise.all([
-      fetch("data/questions.json"),
-      fetch("data/data.json")
+    const [qRes, dRes, sRes] = await Promise.all([
+      fetch("maths.json"),
+      fetch("maths-syllabus.json"),
+      fetch("maths-data.json")
     ]);
     const qData = await qRes.json();
-    const dData = await dRes.json();
-    allQuestions = qData.questions;
-    flashcardData = qData.flashcards;
-    cheatSections = qData.cheatsheet;
-    modelPaperData = qData.modelpaper;
-    examTipsData = qData.examTips;
-    syllabusData = dData;
+    const sData = await sRes.json();
+    syllabusData = sData;
+    allQuestions = qData.questions || [];
+    flashcardData = qData.flashcards || [];
+    cheatSections = qData.cheatsheet || [];
+    modelPaperData = qData.modelpaper || {};
+    examTipsData = qData.examTips || [];
   } catch (e) { console.error("Failed to load data:", e); }
 }
 
@@ -37,8 +38,8 @@ function updateStats() {
   if (str) str.textContent = streak;
   if (acc) acc.textContent = totalAttempted > 0 ? Math.round((correctCount / totalAttempted) * 100) + "%" : "0%";
   if (prog) prog.textContent = totalAttempted + "/" + allQuestions.length;
-  localStorage.setItem("chemcrash_xp", totalXP);
-  localStorage.setItem("chemcrash_bestStreak", Math.max(bestStreak, streak));
+  localStorage.setItem("mathscrash_xp", totalXP);
+  localStorage.setItem("mathscrash_bestStreak", Math.max(bestStreak, streak));
 }
 
 function resetStats() {
