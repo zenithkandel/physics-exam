@@ -115,8 +115,8 @@ function navigateTo(page) {
   sessionStorage.setItem("mathscrash_currentPage", page);
   document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("active"));
   document.querySelectorAll(".bottom-nav-item").forEach(item => item.classList.remove("active"));
-  document.querySelector(`.sidebar .nav-item[data-page="\${page}"]`)?.classList.add("active");
-  document.querySelector(`.bottom-nav-item[data-page="\${page}"]`)?.classList.add("active");
+  document.querySelector(`.sidebar .nav-item[data-page="${page}"]`)?.classList.add("active");
+  document.querySelector(`.bottom-nav-item[data-page="${page}"]`)?.classList.add("active");
   const titleEl = getEl("topbar-title");
   if (titleEl) titleEl.textContent = page.charAt(0).toUpperCase() + page.slice(1);
   const mainContent = getEl("mainContent");
