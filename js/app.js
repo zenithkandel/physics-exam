@@ -17,9 +17,9 @@ function getEl(id) { return document.getElementById(id); }
 async function loadData() {
   try {
     const [qRes, dRes, sRes] = await Promise.all([
-      fetch("maths.json"),
-      fetch("maths-syllabus.json"),
-      fetch("maths-data.json")
+      fetch("data/maths.json"),
+      fetch("data/maths-syllabus.json"),
+      fetch("data/maths-data.json")
     ]);
     const qData = await qRes.json();
     const sData = await sRes.json();
@@ -475,7 +475,7 @@ function renderSyllabus() {
       </div>
     </div>
     <div class="syllabus-page">`;
-  
+
   units.forEach((unit, uIdx) => {
     const isExpanded = expandedUnits[uIdx] === true;
     html += `<div class="syllabus-unit">
@@ -487,7 +487,7 @@ function renderSyllabus() {
         </div>
       </div>
       <div class="syllabus-chapters ${isExpanded ? 'show' : ''}" id="unit-${uIdx}">`;
-    
+
     unit.chapters.forEach((chapter, chIdx) => {
       const chapterKey = `unit${uIdx}-ch${chIdx}`;
       const isChapterComplete = completedTopics[chapterKey] === true;
@@ -500,7 +500,7 @@ function renderSyllabus() {
           <div class="syllabus-chapter-weight">${chapter.estimated_exam_weight}</div>
         </div>
         <div class="syllabus-topics">`;
-      
+
       chapter.topics.forEach((topic, topicIdx) => {
         const topicKey = `unit${uIdx}-ch${chIdx}-topic${topicIdx}`;
         const isTopicComplete = completedTopics[topicKey] === true;
@@ -515,31 +515,31 @@ function renderSyllabus() {
           ${topic.subtopics?.length ? `<ul class="syllabus-subtopics">${topic.subtopics.map(s => `<li>${s}</li>`).join('')}</ul>` : ''}
         </div>`;
       });
-      
+
       if (chapter.important_numericals?.length) {
         html += `<div class="syllabus-topic"><div class="syllabus-topic-header"><div class="syllabus-topic-name">Important Numericals</div></div><ul class="syllabus-subtopics">${chapter.important_numericals.map(n => `<li>${n}</li>`).join('')}</ul></div>`;
       }
       if (chapter.important_reactions?.length) {
         html += `<div class="syllabus-topic"><div class="syllabus-topic-header"><div class="syllabus-topic-name">Important Reactions</div></div><ul class="syllabus-subtopics">${chapter.important_reactions.map(r => `<li>${r}</li>`).join('')}</ul></div>`;
       }
-      
+
       html += `</div></div>`;
     });
-    
+
     html += `</div></div>`;
   });
-  
+
   html += `</div></div>`;
   getEl("mainContent").innerHTML = html;
   updateSyllabusStats();
-  
+
   if (scrollTarget) {
     const [uIdx, chIdx] = scrollTarget.split("-").map(Number);
     const unitEl = getEl("unit-" + uIdx);
     if (unitEl && !unitEl.classList.contains("show")) {
       unitEl.classList.add("show");
-expandedUnits[uIdx] = true;
-    localStorage.setItem("mathscrash_expanded", JSON.stringify(expandedUnits));
+      expandedUnits[uIdx] = true;
+      localStorage.setItem("mathscrash_expanded", JSON.stringify(expandedUnits));
     }
     setTimeout(() => {
       const chapterEl = document.querySelector(`[data-chapter-idx="${scrollTarget}"]`);
@@ -558,7 +558,7 @@ function toggleUnit(idx) {
   if (el) {
     const isExpanded = el.classList.contains("show");
     if (isExpanded) {
-delete expandedUnits[idx];
+      delete expandedUnits[idx];
     }
     el.classList.toggle("show");
     localStorage.setItem("mathscrash_expanded", JSON.stringify(expandedUnits));
@@ -594,10 +594,10 @@ function toggleTopic(key, e) {
 function updateSyllabusStats() {
   const statsEl = getEl("syllabusStats");
   if (!statsEl || !syllabusData.syllabus) return;
-  
+
   let totalTopics = 0;
   let completedCount = 0;
-  
+
   syllabusData.syllabus.forEach((unit, uIdx) => {
     unit.chapters.forEach((chapter, chIdx) => {
       chapter.topics.forEach((topic, topicIdx) => {
@@ -607,7 +607,7 @@ function updateSyllabusStats() {
       });
     });
   });
-  
+
   const pct = totalTopics > 0 ? Math.round((completedCount / totalTopics) * 100) : 0;
   statsEl.innerHTML = `<div class="syllabus-progress-bar"><div class="syllabus-progress-fill" style="width:${pct}%"></div></div><span class="syllabus-progress-text">${completedCount}/${totalTopics} completed</span>`;
 }
@@ -777,10 +777,12 @@ function performSearch(query) {
   allQuestions.forEach((item, i) => { if (item.q.toLowerCase().includes(q) || item.opts.some(o => o.toLowerCase().includes(q))) results.push({ type: "Question", title: item.q.substring(0, 60) + (item.q.length > 60 ? "..." : ""), page: "quiz" }); });
   flashcardData.forEach(item => { if (item.front.toLowerCase().includes(q) || item.back.toLowerCase().includes(q)) results.push({ type: "Flashcard", title: item.front, page: "flashcards" }); });
   cheatSections.forEach(sec => { sec.items.forEach(item => { if (item.toLowerCase().includes(q)) results.push({ type: "Cheatsheet", title: item.replace(/<[^>]*>/g, '').substring(0, 60), page: "cheatsheet" }); }); });
-  if (syllabusData.syllabus) syllabusData.syllabus.forEach((unit, uIdx) => { unit.chapters.forEach((ch, chIdx) => { 
-    if (ch.chapter_name.toLowerCase().includes(q)) results.push({ type: "Syllabus", title: ch.chapter_name, sub: unit.unit_name, page: "syllabus", unitIdx: uIdx, chapterIdx: chIdx });
-    ch.topics.forEach((topic, topicIdx) => { if (topic.topic_name.toLowerCase().includes(q)) results.push({ type: "Syllabus", title: topic.topic_name, sub: ch.chapter_name + " - " + unit.unit_name, page: "syllabus", unitIdx: uIdx, chapterIdx: chIdx }); });
-  }); });
+  if (syllabusData.syllabus) syllabusData.syllabus.forEach((unit, uIdx) => {
+    unit.chapters.forEach((ch, chIdx) => {
+      if (ch.chapter_name.toLowerCase().includes(q)) results.push({ type: "Syllabus", title: ch.chapter_name, sub: unit.unit_name, page: "syllabus", unitIdx: uIdx, chapterIdx: chIdx });
+      ch.topics.forEach((topic, topicIdx) => { if (topic.topic_name.toLowerCase().includes(q)) results.push({ type: "Syllabus", title: topic.topic_name, sub: ch.chapter_name + " - " + unit.unit_name, page: "syllabus", unitIdx: uIdx, chapterIdx: chIdx }); });
+    });
+  });
 
   return results.slice(0, 10);
 }
