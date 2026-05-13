@@ -1,639 +1,399 @@
 {
   "questions": [
     {
-      "q": "If A = {1, 2, 3} and B = {3, 4, 5}, then \\( A \\cup B \\) is:",
+      "q": "If $A = \\{1, 2, 3\\}$ and $B = \\{3, 4, 5\\}$, then $A \\cup B$ is:",
       "opts": [
-        "\\( {1,2,3,4,5} \\)",
-        "\\( {3} \\)",
-        "\\( {1,2} \\)",
-        "\\( {4,5} \\)"
+        "$\\{1,2,3,4,5\\}$",
+        "$\\{3\\}$",
+        "$\\{1,2\\}$",
+        "$\\{4,5\\}$"
       ],
       "ans": 0,
       "hint": "Union contains all elements from both sets."
     },
     {
-      "q": "The domain of the function \\( f(x) = \\( \\sqrt{(x-2)} \\) is:",
+      "q": "The domain of the function $f(x) = \\sqrt{x-2}$ is:",
       "opts": [
-        "\\( x \\ge 2 \\)",
-        "\\( x \\le 2 \\)",
-        "\\( x > 2 \\)",
-        "\\( x < 2 \\)"
+        "$x \\geq 2$",
+        "$x \\leq 2$",
+        "$x > 2$",
+        "$x < 2$"
       ],
       "ans": 0,
-      "hint": "Square root requires non-negative radicand: x-2 \\ge  0"
+      "hint": "Square root requires non-negative radicand: $x-2 \\geq 0$"
     },
     {
-      "q": "If \\( f(x) = 2x \\) + 3, then \\( f^{-1}(x) \\) is:",
+      "q": "If $f(x) = 2x + 3$, then $f^{-1}(x)$ is:",
       "opts": [
-        "\\( \\frac{x-3}{2} \\)",
-        "\\( 2x + 3 \\)",
-        "\\( \\frac{x}{2} - 3 \\)",
-        "\\( \\frac{x+3}{2} \\)"
+        "$\\frac{x-3}{2}$",
+        "$2x + 3$",
+        "$\\frac{x}{2} - 3$",
+        "$\\frac{x+3}{2}$"
       ],
       "ans": 0,
-      "hint": "Swap x and y, solve for y: x = 2y + 3 \\to  y = \\frac{x-3}{2}"
+      "hint": "Swap x and y, solve for y: $x = 2y + 3 \\Rightarrow y = \\frac{x-3}{2}$"
     },
     {
-      "q": "The sum of first 10 terms of arithmetic sequence with \\( a_1 \\) = 2 and d = 3 is:",
-      "opts": [
-        "\\( 155 \\)",
-        "\\( 165 \\)",
-        "\\( 175 \\)",
-        "\\( 185 \\)"
-      ],
+      "q": "The sum of first 10 terms of arithmetic sequence with $a_1 = 2$ and $d = 3$ is:",
+      "opts": ["155", "165", "175", "185"],
       "ans": 0,
-      "hint": "S_n = \\frac{n}{2}[2a + (n-1)d] = 10/2[4 + 27] = 5 \\times  31 = 155"
+      "hint": "$S_n = \\frac{n}{2}[2a + (n-1)d] = \\frac{10}{2}[4 + 27] = 5 \\times 31 = 155$"
     },
     {
       "q": "The 5th term of geometric sequence 2, 6, 18, ... is:",
-      "opts": [
-        "\\( 162 \\)",
-        "\\( 54 \\)",
-        "\\( 486 \\)",
-        "\\( 1458 \\)"
-      ],
+      "opts": ["162", "54", "486", "1458"],
       "ans": 0,
-      "hint": "GP: a = 2, r = 3. T₅ = ar^{4} = 2 \\times  3^{4} = 2 \\times  81 = 162"
+      "hint": "GP: $a = 2$, $r = 3$. $T_5 = ar^{4} = 2 \\times 3^{4} = 2 \\times 81 = 162$"
     },
     {
       "q": "If A.M = 10 and G.M = 8, then H.M is:",
-      "opts": [
-        "\\( 6.4 \\)",
-        "\\( 5 \\)",
-        "\\( 8 \\)",
-        "\\( 9 \\)"
-      ],
+      "opts": ["6.4", "5", "8", "9"],
       "ans": 0,
-      "hint": "H.M = G.M^{2}/A.M = \\frac{64}{10} = 6.4"
+      "hint": "$H.M = \\frac{G.M^2}{A.M} = \\frac{64}{10} = 6.4$"
     },
     {
-      "q": "The sum of infinite geometric series 1 + \\frac{1}{2} + \\frac{1}{4} + ... is:",
-      "opts": [
-        "\\( 2 \\)",
-        "\\( 1 \\)",
-        "\\( 1.5 \\)",
-        "\\( 3 \\)"
-      ],
+      "q": "The sum of infinite geometric series $1 + \\frac{1}{2} + \\frac{1}{4} + ...$ is:",
+      "opts": ["2", "1", "1.5", "3"],
       "ans": 0,
-      "hint": "\\( S_\\infty \\) = a/(1-r) = 1/(1-\\frac{1}{2}) = \\frac{1}{0.5} = 2"
+      "hint": "$S_\\infty = \\frac{a}{1-r} = \\frac{1}{1-\\frac{1}{2}} = \\frac{1}{0.5} = 2$"
     },
     {
-      "q": "If A = [[1,2],[3,4]], then determinant of A is:",
-      "opts": [
-        "\\( -2 \\)",
-        "\\( 2 \\)",
-        "\\( -10 \\)",
-        "\\( 10 \\)"
-      ],
+      "q": "If $A = \\begin{pmatrix}1 & 2\\\\ 3 & 4\\end{pmatrix}$, then determinant of A is:",
+      "opts": ["-2", "2", "-10", "10"],
       "ans": 0,
-      "hint": "det(A) = 1\\times 4 - 2\\times 3 = 4 - 6 = -2"
+      "hint": "$det(A) = 1 \\times 4 - 2 \\times 3 = 4 - 6 = -2$"
     },
     {
-      "q": "If a and b are roots of x^2 - 5x + 6 = 0, then a + b is:",
-      "opts": [
-        "\\( 5 \\)",
-        "\\( 6 \\)",
-        "\\( -5 \\)",
-        "\\( -6 \\)"
-      ],
+      "q": "If a and b are roots of $x^2 - 5x + 6 = 0$, then $a + b$ is:",
+      "opts": ["5", "6", "-5", "-6"],
       "ans": 0,
-      "hint": "Sum of roots = -\\frac{b}{a} = -(-5)/1 = 5"
+      "hint": "Sum of roots $= -\\frac{b}{a} = -(-5)/1 = 5$"
     },
     {
-      "q": "The product of roots of x^2 + 4x + 4 = 0 is:",
-      "opts": [
-        "\\( 4 \\)",
-        "\\( -4 \\)",
-        "\\( 2 \\)",
-        "\\( -2 \\)"
-      ],
+      "q": "The product of roots of $x^2 + 4x + 4 = 0$ is:",
+      "opts": ["4", "-4", "2", "-2"],
       "ans": 0,
-      "hint": "Product of roots = \\frac{c}{a} = \\frac{4}{1} = 4"
+      "hint": "Product of roots $= \\frac{c}{a} = \\frac{4}{1} = 4$"
     },
     {
-      "q": "If z = 3 + 4i, then |z| (modulus) is:",
-      "opts": [
-        "\\( 5 \\)",
-        "\\( 3 \\)",
-        "\\( 4 \\)",
-        "\\( 7 \\)"
-      ],
+      "q": "If $z = 3 + 4i$, then $|z|$ (modulus) is:",
+      "opts": ["5", "3", "4", "7"],
       "ans": 0,
-      "hint": "|z| = \\( \\sqrt{(3^{2}} \\) + 4^{2}) = \\( \\sqrt{(9+16)} \\) = \\( \\sqrt{25} \\) = 5"
+      "hint": "$|z| = \\sqrt{3^2 + 4^2} = \\sqrt{9+16} = \\sqrt{25} = 5$"
     },
     {
-      "q": "The conjugate of 2 - 3i is:",
-      "opts": [
-        "\\( 2 + 3i \\)",
-        "\\( -2 + 3i \\)",
-        "\\( 2 - 3i \\)",
-        "\\( -2 - 3i \\)"
-      ],
+      "q": "The conjugate of $2 - 3i$ is:",
+      "opts": ["$2 + 3i$", "$-2 + 3i$", "$2 - 3i$", "$-2 - 3i$"],
       "ans": 0,
       "hint": "Conjugate changes sign of imaginary part."
     },
     {
-      "q": "\\( \\sin^{-1} \\)(\\frac{1}{2}) equals:",
-      "opts": [
-        "\\( \\pi/6 \\)",
-        "\\( \\pi/3 \\)",
-        "\\( \\pi/2 \\)",
-        "\\( \\pi \\)"
-      ],
+      "q": "$\\sin^{-1}\\left(\\frac{1}{2}\\right)$ equals:",
+      "opts": ["$\\frac{\\pi}{6}$", "$\\frac{\\pi}{3}$", "$\\frac{\\pi}{2}$", "$\\pi$"],
       "ans": 0,
-      "hint": "sin(\\pi/6) = \\frac{1}{2}, so \\( \\sin^{-1} \\)(\\frac{1}{2}) = \\pi/6"
+      "hint": "$\\sin(\\frac{\\pi}{6}) = \\frac{1}{2}$"
     },
     {
-      "q": "\\( \\tan^{-1} \\)(1) equals:",
-      "opts": [
-        "\\( \\pi/4 \\)",
-        "\\( \\pi/3 \\)",
-        "\\( \\pi/2 \\)",
-        "\\( \\pi/6 \\)"
-      ],
+      "q": "$\\tan^{-1}(1)$ equals:",
+      "opts": ["$\\frac{\\pi}{4}$", "$\\frac{\\pi}{3}$", "$\\frac{\\pi}{2}$", "$\\frac{\\pi}{6}$"],
       "ans": 0,
-      "hint": "tan(\\pi/4) = 1, so \\( \\tan^{-1} \\)(1) = \\pi/4"
+      "hint": "$\\tan(\\frac{\\pi}{4}) = 1$"
     },
     {
-      "q": "The general solution of sin x = 0 is:",
-      "opts": [
-        "\\( n\\pi \\)",
-        "\\( \\pi/2 + n\\pi \\)",
-        "\\( 2n\\pi \\)",
-        "\\( \\pi/4 + n\\pi \\)"
-      ],
+      "q": "The general solution of $\\sin x = 0$ is:",
+      "opts": ["$n\\pi$", "$\\frac{\\pi}{2} + n\\pi$", "$2n\\pi$", "$\\frac{\\pi}{4} + n\\pi$"],
       "ans": 0,
-      "hint": "sin x = 0 when x = n\\pi where n is integer."
+      "hint": "$\\sin x = 0$ when $x = n\\pi$ where $n$ is integer."
     },
     {
-      "q": "Distance from point (2,3) to line 3x + 4y + 5 = 0 is:",
-      "opts": [
-        "\\( 4.6 \\)",
-        "\\( 3 \\)",
-        "\\( 5 \\)",
-        "\\( 2 \\)"
-      ],
+      "q": "Distance from point $(2,3)$ to line $3x + 4y + 5 = 0$ is:",
+      "opts": ["4.6", "3", "5", "2"],
       "ans": 0,
-      "hint": "d = |3(2)+4(3)+5|/\\( \\sqrt{(3^{2}+4^{2})} \\) = |23|/5 = 4.6"
+      "hint": "$d = \\frac{|3(2)+4(3)+5|}{\\sqrt{3^2+4^2}} = \\frac{|23|}{5} = 4.6$"
     },
     {
-      "q": "If a vector has direction ratios 2, 3, 6, then its direction cosines are:",
-      "opts": [
-        "\\( \\frac{2}{7}, \\frac{3}{7}, \\frac{6}{7} \\)",
-        "\\( \\frac{1}{7}, \\frac{2}{7}, \\frac{3}{7} \\)",
-        "\\( \\frac{2}{13}, \\frac{3}{13}, \\frac{6}{13} \\)",
-        "\\( \\frac{2}{5}, \\frac{3}{5}, \\frac{6}{5} \\)"
-      ],
+      "q": "If a vector has direction ratios $2, 3, 6$, then its direction cosines are:",
+      "opts": ["$\\frac{2}{7}, \\frac{3}{7}, \\frac{6}{7}$", "$\\frac{1}{7}, \\frac{2}{7}, \\frac{3}{7}$", "$\\frac{2}{13}, \\frac{3}{13}, \\frac{6}{13}$", "$\\frac{2}{5}, \\frac{3}{5}, \\frac{6}{5}$"],
       "ans": 0,
-      "hint": "Direction cosines = a/\\( \\sqrt{(a^{2}+b^{2}+c^{2}),} \\) etc. = \\frac{2}{7}, \\frac{3}{7}, \\frac{6}{7}"
+      "hint": "Direction cosines $= \\frac{a}{\\sqrt{a^2+b^2+c^2}}$, etc."
     },
     {
       "q": "The variance of data: 2, 4, 6, 8, 10 is:",
-      "opts": [
-        "\\( 8 \\)",
-        "\\( 10 \\)",
-        "\\( 6 \\)",
-        "\\( 4 \\)"
-      ],
+      "opts": ["8", "10", "6", "4"],
       "ans": 0,
-      "hint": "Mean = 6, Variance = \\Sigma(x-mean)^{2}/n = \\frac{40}{5} = 8"
+      "hint": "Mean $= 6$, Variance $= \\frac{\\sum(x-\\bar{x})^2}{n} = \\frac{40}{5} = 8$"
     },
     {
       "q": "Standard deviation of 4, 8, 12, 16, 20 is:",
-      "opts": [
-        "4\\( \\sqrt{5} \\)",
-        "\\( 4 \\)",
-        "\\( 8 \\)",
-        "\\( \\sqrt{8} \\)"
-      ],
+      "opts": ["$4\\sqrt{2}$", "4", "8", "$\\sqrt{8}$"],
       "ans": 0,
-      "hint": "Mean = 12, Variance = (\\Sigma(x-mean)^{2})/n = \\frac{160}{5} = 32, SD = \\( \\sqrt{32} \\) = 4\\( \\sqrt{2} \\)"
+      "hint": "Mean $= 12$, Variance $= 32$, SD $= \\sqrt{32} = 4\\sqrt{2}$"
     },
     {
-      "q": "If P(A) = 0.3, P(B) = 0.4, and A and B are independent, then P(A∩B) is:",
-      "opts": [
-        "\\( 0.12 \\)",
-        "\\( 0.7 \\)",
-        "\\( 0.1 \\)",
-        "\\( 0.35 \\)"
-      ],
+      "q": "If $P(A) = 0.3$, $P(B) = 0.4$, and A and B are independent, then $P(A \\cap B)$ is:",
+      "opts": ["0.12", "0.7", "0.1", "0.35"],
       "ans": 0,
-      "hint": "For independent events: P(A∩B) = P(A) \\times  P(B) = 0.3 \\times  0.4 = 0.12"
+      "hint": "For independent events: $P(A \\cap B) = P(A) \\times P(B) = 0.3 \\times 0.4 = 0.12$"
     },
     {
-      "q": "P(A∪B) = P(A) + P(B) - P(A∩B) is known as:",
-      "opts": [
-        "Addition Law",
-        "Multiplication Law",
-        "Bayes Theorem",
-        "Conditional Law"
-      ],
+      "q": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$ is known as:",
+      "opts": ["Addition Law", "Multiplication Law", "Bayes Theorem", "Conditional Law"],
       "ans": 0,
       "hint": "This is the Addition Law of probability."
     },
     {
-      "q": "If P(A) = 0.5, P(B) = 0.3, and P(A∩B) = 0.1, then P(A|B) is:",
-      "opts": [
-        "\\( \\frac{1}{3} \\)",
-        "\\( 0.5 \\)",
-        "\\( 0.2 \\)",
-        "\\( 0.8 \\)"
-      ],
+      "q": "If $P(A) = 0.5$, $P(B) = 0.3$, and $P(A \\cap B) = 0.1$, then $P(A|B)$ is:",
+      "opts": ["$\\frac{1}{3}$", "0.5", "0.2", "0.8"],
       "ans": 0,
-      "hint": "P(A|B) = P(A∩B)/P(B) = \\frac{0.1}{0.3} = \\frac{1}{3}"
+      "hint": "$P(A|B) = \\frac{P(A \\cap B)}{P(B)} = \\frac{0.1}{0.3} = \\frac{1}{3}$"
     },
     {
-      "q": "\\( \\lim_{x \\to 0} \\) \\frac{\\sin x}{x} equals:",
-      "opts": [
-        "\\( 1 \\)",
-        "\\( 0 \\)",
-        "\\( \\infty  \\)",
-        "Does not exist"
-      ],
+      "q": "$\\lim_{x \\to 0} \\frac{\\sin x}{x}$ equals:",
+      "opts": ["1", "0", "$\\infty$", "Does not exist"],
       "ans": 0,
       "hint": "This is a fundamental limit in calculus = 1"
     },
     {
-      "q": "\\( \\lim_{x \\to 0} \\) \\frac{e^x - 1}{x} equals:",
-      "opts": [
-        "\\( 1 \\)",
-        "\\( 0 \\)",
-        "e",
-        "\\( \\infty  \\)"
-      ],
+      "q": "$\\lim_{x \\to 0} \\frac{e^x - 1}{x}$ equals:",
+      "opts": ["1", "0", "$e$", "$\\infty$"],
       "ans": 0,
       "hint": "This is a standard limit = 1"
     },
     {
-      "q": "The derivative of x^3 is:",
-      "opts": [
-        "\\( 3x^2 \\)",
-        "\\( x^2 \\)",
-        "\\( 3x \\)",
-        "\\( x^3/3 \\)"
-      ],
+      "q": "The derivative of $x^3$ is:",
+      "opts": ["$3x^2$", "$x^2$", "$3x$", "$\\frac{x^3}{3}$"],
       "ans": 0,
-      "hint": "\\( \\frac{d}{dx}(x^n) \\) = nx^n^{-1}, so \\( \\frac{d}{dx}(x^3) \\) = 3x^2"
+      "hint": "$\\frac{d}{dx}(x^n) = nx^{n-1}$, so $\\frac{d}{dx}(x^3) = 3x^2$"
     },
     {
-      "q": "If y = x^2 + 2x, then dy/dx is:",
-      "opts": [
-        "\\( 2x + 2 \\)",
-        "\\( 2x \\)",
-        "\\( x^2 + 2 \\)",
-        "\\( x + 2 \\)"
-      ],
+      "q": "If $y = x^2 + 2x$, then $\\frac{dy}{dx}$ is:",
+      "opts": ["$2x + 2$", "$2x$", "$x^2 + 2$", "$x + 2$"],
       "ans": 0,
-      "hint": "\\( \\frac{d}{dx}(x^2) \\) + \\( \\frac{d}{dx}(2x) \\) = 2x + 2"
+      "hint": "$\\frac{d}{dx}(x^2) + \\frac{d}{dx}(2x) = 2x + 2$"
     },
     {
-      "q": "\\( \\frac{d}{dx}(cos x) \\) equals:",
-      "opts": [
-        "\\( -sin x \\)",
-        "sin x",
-        "tan x",
-        "cot x"
-      ],
+      "q": "$\\frac{d}{dx}(\\cos x)$ equals:",
+      "opts": ["$-\\sin x$", "$\\sin x$", "$\\tan x$", "$\\cot x$"],
       "ans": 0,
-      "hint": "Derivative of cos x is -sin x"
+      "hint": "Derivative of $\\cos x$ is $-\\sin x$"
     },
     {
-      "q": "\\( \\frac{d}{dx}(ln x) \\) equals:",
-      "opts": [
-        "\\( \\frac{1}{x} \\)",
-        "x",
-        "\\( e^x \\)",
-        "log x"
-      ],
+      "q": "$\\frac{d}{dx}(\\ln x)$ equals:",
+      "opts": ["$\\frac{1}{x}$", "$x$", "$e^x$", "$\\log x$"],
       "ans": 0,
-      "hint": "Derivative of natural log is \\frac{1}{x}"
+      "hint": "Derivative of natural log is $\\frac{1}{x}$"
     },
     {
-      "q": "\\( \\int dx \\) equals:",
-      "opts": [
-        "\\( x + C \\)",
-        "\\( 1 + C \\)",
-        "\\( x^2 + C \\)",
-        "C"
-      ],
+      "q": "$\\int dx$ equals:",
+      "opts": ["$x + C$", "$1 + C$", "$x^2 + C$", "$C$"],
       "ans": 0,
-      "hint": "Integral of 1 (dx) is x + constant"
+      "hint": "Integral of $1$ ($dx$) is $x + $ constant"
     },
     {
-      "q": "\\( \\int x^ndx (n \\neq  -1) \\) equals:",
-      "opts": [
-        "\\( x^n^{+1}/(n+1) + C \\)",
-        "\\( x^n + C \\)",
-        "\\( nx^n^{-1} + C \\)",
-        "\\( x^n^{+1} + C \\)"
-      ],
+      "q": "$\\int x^n dx$ ($n \\neq -1$) equals:",
+      "opts": ["$\\frac{x^{n+1}}{n+1} + C$", "$x^n + C$", "$nx^{n-1} + C$", "$x^{n+1} + C$"],
       "ans": 0,
-      "hint": "\\int x^ndx = x^n^{+1}/(n+1) + C"
+      "hint": "$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$"
     },
     {
-      "q": "\\( \\int e^x dx \\) equals:",
-      "opts": [
-        "\\( e^x + C \\)",
-        "\\( e^x - 1 + C \\)",
-        "\\( xe^x + C \\)",
-        "\\( e^x + x + C \\)"
-      ],
+      "q": "$\\int e^x dx$ equals:",
+      "opts": ["$e^x + C$", "$e^x - 1 + C$", "$xe^x + C$", "$e^x + x + C$"],
       "ans": 0,
-      "hint": "Integral of e^x is e^x + C"
+      "hint": "Integral of $e^x$ is $e^x + C$"
     },
     {
-      "q": "\\( \\frac{d}{dx}(tan x) \\) equals:",
-      "opts": [
-        "\\( sec^{2}x \\)",
-        "sec x",
-        "\\( -cot x \\)",
-        "\\( cos^{2}x \\)"
-      ],
+      "q": "$\\frac{d}{dx}(\\tan x)$ equals:",
+      "opts": ["$\\sec^2 x$", "$\\sec x$", "$-\\cot x$", "$\\cos^2 x$"],
       "ans": 0,
-      "hint": "Derivative of tan x is sec^{2}x"
+      "hint": "Derivative of $\\tan x$ is $\\sec^2 x$"
     },
     {
-      "q": "If \\( f(x) = x^2 \\) - 4x + 3, then critical point is at x =",
-      "opts": [
-        "\\( 2 \\)",
-        "\\( 0 \\)",
-        "\\( 4 \\)",
-        "\\( 1 \\)"
-      ],
+      "q": "If $f(x) = x^2 - 4x + 3$, then critical point is at $x =$",
+      "opts": ["2", "0", "4", "1"],
       "ans": 0,
-      "hint": "f'(x) = 2x - 4 = 0 \\to  x = 2"
+      "hint": "$f'(x) = 2x - 4 = 0 \\Rightarrow x = 2$"
     },
     {
-      "q": "The matrix [[1,0],[0,1]] is called:",
-      "opts": [
-        "Identity matrix",
-        "Zero matrix",
-        "Scalar matrix",
-        "Diagonal matrix"
-      ],
+      "q": "The matrix $\\begin{pmatrix}1 & 0\\\\ 0 & 1\\end{pmatrix}$ is called:",
+      "opts": ["Identity matrix", "Zero matrix", "Scalar matrix", "Diagonal matrix"],
       "ans": 0,
       "hint": "Identity matrix has 1s on diagonal, 0s elsewhere"
     },
     {
-      "q": "If A is a 2\\times 3 matrix and B is a 3\\times 2 matrix, then AB is:",
-      "opts": [
-        "\\( 2\\times 2 matrix \\)",
-        "\\( 3\\times 3 matrix \\)",
-        "\\( 2\\times 3 matrix \\)",
-        "\\( 3\\times 2 matrix \\)"
-      ],
+      "q": "If A is a $2 \\times 3$ matrix and B is a $3 \\times 2$ matrix, then AB is:",
+      "opts": ["$2 \\times 2$ matrix", "$3 \\times 3$ matrix", "$2 \\times 3$ matrix", "$3 \\times 2$ matrix"],
       "ans": 0,
-      "hint": "Multiply: (2\\times 3) \\times  (3\\times 2) = (2\\times 2) matrix"
+      "hint": "$(2 \\times 3) \\times (3 \\times 2) = (2 \\times 2)$ matrix"
     },
     {
-      "q": "The transpose of [[1,2],[3,4]] is:",
-      "opts": [
-        "\\( [1,3; 2,4] \\)",
-        "\\( [1,2; 3,4] \\)",
-        "\\( [4,3; 2,1] \\)",
-        "\\( [2,1; 4,3] \\)"
-      ],
+      "q": "The transpose of $\\begin{pmatrix}1 & 2\\\\ 3 & 4\\end{pmatrix}$ is:",
+      "opts": ["$\\begin{pmatrix}1 & 3\\\\ 2 & 4\\end{pmatrix}$", "$\\begin{pmatrix}1 & 2\\\\ 3 & 4\\end{pmatrix}$", "$\\begin{pmatrix}4 & 3\\\\ 2 & 1\\end{pmatrix}$", "$\\begin{pmatrix}2 & 1\\\\ 4 & 3\\end{pmatrix}$"],
       "ans": 0,
       "hint": "Transpose swaps rows and columns"
     },
     {
-      "q": "For what value of x is the function \\( f(x) = x^2 \\) - 4x + 3 minimum?",
-      "opts": [
-        "\\( 2 \\)",
-        "\\( 4 \\)",
-        "\\( 1 \\)",
-        "\\( 3 \\)"
-      ],
+      "q": "For what value of $x$ is the function $f(x) = x^2 - 4x + 3$ minimum?",
+      "opts": ["2", "4", "1", "3"],
       "ans": 0,
-      "hint": "f'(x) = 2x - 4 = 0 \\to  x = 2 is critical point (minimum)"
+      "hint": "$f'(x) = 2x - 4 = 0 \\Rightarrow x = 2$ is critical point (minimum)"
     },
     {
-      "q": "If A = {1,2,3} and B = {2,3,4}, then \\( A \\cap B \\) is:",
-      "opts": [
-        "\\( {2,3} \\)",
-        "\\( {1,2,3,4} \\)",
-        "\\( {1,4} \\)",
-        "\\( { } \\)"
-      ],
+      "q": "If $A = \\{1,2,3\\}$ and $B = \\{2,3,4\\}$, then $A \\cap B$ is:",
+      "opts": ["$\\{2,3\\}$", "$\\{1,2,3,4\\}$", "$\\{1,4\\}$", "$\\emptyset$"],
       "ans": 0,
       "hint": "Intersection contains only common elements"
     },
     {
-      "q": "The 8th term of arithmetic sequence with \\( a_1 \\) = 5 and d = 2 is:",
-      "opts": [
-        "\\( 19 \\)",
-        "\\( 21 \\)",
-        "\\( 17 \\)",
-        "\\( 23 \\)"
-      ],
+      "q": "The 8th term of arithmetic sequence with $a_1 = 5$ and $d = 2$ is:",
+      "opts": ["19", "21", "17", "23"],
       "ans": 0,
-      "hint": "Tn = a + (n-1)d = 5 + 7\\times 2 = 19"
+      "hint": "$T_n = a + (n-1)d = 5 + 7 \\times 2 = 19$"
     },
     {
-      "q": "If 2 + 4 + 6 + ... + n = 210, then n equals:",
-      "opts": [
-        "\\( 30 \\)",
-        "\\( 28 \\)",
-        "\\( 32 \\)",
-        "\\( 26 \\)"
-      ],
+      "q": "If $2 + 4 + 6 + ... + n = 210$, then $n$ equals:",
+      "opts": ["30", "28", "32", "26"],
       "ans": 0,
-      "hint": "Even numbers: 2+4+...+n = n(n+2)/4 = 210 \\to  n=30"
+      "hint": "Even numbers: $2+4+...+n = \\frac{n(n+2)}{4} = 210 \\Rightarrow n=30$"
     },
     {
-      "q": "The value of i^{2} (where i = \\( \\sqrt{(-1))} \\) is:",
-      "opts": [
-        "\\( -1 \\)",
-        "\\( 1 \\)",
-        "i",
-        "\\( -i \\)"
-      ],
+      "q": "The value of $i^2$ (where $i = \\sqrt{-1}$) is:",
+      "opts": ["-1", "1", "$i$", "$-i$"],
       "ans": 0,
-      "hint": "i^{2} = (\\( \\sqrt{(-1))^{2}} \\) = -1"
+      "hint": "$i^2 = (\\sqrt{-1})^2 = -1$"
     },
     {
-      "q": "If z = 1 + i, then z^{2} equals:",
-      "opts": [
-        "\\( 2i \\)",
-        "\\( 0 \\)",
-        "\\( 2 \\)",
-        "\\( 1 + 2i \\)"
-      ],
+      "q": "If $z = 1 + i$, then $z^2$ equals:",
+      "opts": ["$2i$", "0", "2", "$1 + 2i$"],
       "ans": 0,
-      "hint": "z^{2} = (1+i)^{2} = 1 + 2i + i^{2} = 1 + 2i - 1 = 2i"
+      "hint": "$z^2 = (1+i)^2 = 1 + 2i + i^2 = 1 + 2i - 1 = 2i$"
     },
     {
-      "q": "The roots of x^2 - 1 = 0 are:",
-      "opts": [
-        "\\( 1, -1 \\)",
-        "\\( 1, 1 \\)",
-        "\\( i, -i \\)",
-        "\\( 0, 1 \\)"
-      ],
+      "q": "The roots of $x^2 - 1 = 0$ are:",
+      "opts": ["$1, -1$", "$1, 1$", "$i, -i$", "$0, 1$"],
       "ans": 0,
-      "hint": "x^2 - 1 = 0 \\to  x^2 = 1 \\to  x = \\pm 1"
+      "hint": "$x^2 - 1 = 0 \\Rightarrow x^2 = 1 \\Rightarrow x = \\pm 1$"
     },
     {
-      "q": "sin(90° - \\theta) equals:",
-      "opts": [
-        "\\( cos \\theta \\)",
-        "\\( sin \\theta \\)",
-        "\\( tan \\theta \\)",
-        "\\( cot \\theta \\)"
-      ],
+      "q": "$\\sin(90^\\circ - \\theta)$ equals:",
+      "opts": ["$\\cos \\theta$", "$\\sin \\theta$", "$\\tan \\theta$", "$\\cot \\theta$"],
       "ans": 0,
-      "hint": "Co-function identity: sin(90° - \\theta) = cos \\theta"
+      "hint": "Co-function identity: $\\sin(90^\\circ - \\theta) = \\cos \\theta$"
     },
     {
-      "q": "cos(180° - \\theta) equals:",
-      "opts": [
-        "\\( -cos \\theta \\)",
-        "\\( cos \\theta \\)",
-        "\\( sin \\theta \\)",
-        "\\( -sin \\theta \\)"
-      ],
+      "q": "$\\cos(180^\\circ - \\theta)$ equals:",
+      "opts": ["$-\\cos \\theta$", "$\\cos \\theta$", "$\\sin \\theta$", "$-\\sin \\theta$"],
       "ans": 0,
-      "hint": "cos(180° - \\theta) = -cos \\theta"
+      "hint": "$\\cos(180^\\circ - \\theta) = -\\cos \\theta$"
     },
     {
       "q": "The coefficient of variation of data with mean 50 and SD 5 is:",
-      "opts": [
-        "\\( 10% \\)",
-        "\\( 5% \\)",
-        "\\( 20% \\)",
-        "\\( 15% \\)"
-      ],
+      "opts": ["10%", "5%", "20%", "15%"],
       "ans": 0,
-      "hint": "CV = (SD/Mean) \\times  100 = (5/50) \\times  100 = 10%"
+      "hint": "$CV = \\frac{SD}{Mean} \\times 100 = \\frac{5}{50} \\times 100 = 10\\%$"
     },
     {
       "q": "If probability of passing exam is 0.7, then probability of failing is:",
-      "opts": [
-        "\\( 0.3 \\)",
-        "\\( 0.7 \\)",
-        "\\( 1 \\)",
-        "\\( 0 \\)"
-      ],
+      "opts": ["0.3", "0.7", "1", "0"],
       "ans": 0,
-      "hint": "P(fail) = 1 - P(pass) = 1 - 0.7 = 0.3"
+      "hint": "$P(fail) = 1 - P(pass) = 1 - 0.7 = 0.3$"
     },
     {
-      "q": "\\( \\frac{d}{dx}(sin x) \\) equals:",
-      "opts": [
-        "cos x",
-        "\\( -cos x \\)",
-        "sin x",
-        "\\( -sin x \\)"
-      ],
+      "q": "$\\frac{d}{dx}(\\sin x)$ equals:",
+      "opts": ["$\\cos x$", "$-\\cos x$", "$\\sin x$", "$-\\sin x$"],
       "ans": 0,
-      "hint": "Derivative of sin x is cos x"
+      "hint": "Derivative of $\\sin x$ is $\\cos x$"
     },
     {
-      "q": "\\( \\frac{d}{dx}(log x) \\) (base 10) equals:",
-      "opts": [
-        "\\( \\frac{1}{x \\ln 10} \\)",
-        "\\( \\frac{1}{x} \\)",
-        "x",
-        "log x"
-      ],
+      "q": "$\\frac{d}{dx}(\\log x)$ (base 10) equals:",
+      "opts": ["$\\frac{1}{x \\ln 10}$", "$\\frac{1}{x}$", "$x$", "$\\log x$"],
       "ans": 0,
-      "hint": "\\( \\frac{d}{dx}(log₁₀x) \\) = \\frac{1}{x \\ln 10}"
+      "hint": "$\\frac{d}{dx}(\\log_{10}x) = \\frac{1}{x \\ln 10}$"
     },
     {
-      "q": "\\( \\int cos x dx \\) equals:",
-      "opts": [
-        "\\( sin x + C \\)",
-        "\\( -sin x + C \\)",
-        "\\( cos x + C \\)",
-        "\\( tan x + C \\)"
-      ],
+      "q": "$\\int \\cos x \\, dx$ equals:",
+      "opts": ["$\\sin x + C$", "$-\\sin x + C$", "$\\cos x + C$", "$\\tan x + C$"],
       "ans": 0,
-      "hint": "Integral of cos x is sin x + C"
+      "hint": "Integral of $\\cos x$ is $\\sin x + C$"
     },
     {
-      "q": "If \\( f(x) = x^3 \\) - 3x, then f'(x) = 0 at x =",
-      "opts": [
-        "\\( \\pm 1 \\)",
-        "\\( 0, \\pm 1 \\)",
-        "\\( 0 \\)",
-        "\\( \\pm 3 \\)"
-      ],
+      "q": "If $f(x) = x^3 - 3x$, then $f'(x) = 0$ at $x =$",
+      "opts": ["$\\pm 1$", "$0, \\pm 1$", "0", "$\\pm 3$"],
       "ans": 1,
-      "hint": "f'(x) = 3x^2 - 3 = 0 \\to  x^2 = 1 \\to  x = \\pm 1"
+      "hint": "$f'(x) = 3x^2 - 3 = 0 \\Rightarrow x^2 = 1 \\Rightarrow x = \\pm 1$"
     }
   ],
   "flashcards": [
     {
       "front": "Arithmetic Sequence Formula",
-      "back": "Tₙ = a + (n-1)d<br>Sn = n/2[2a + (n-1)d]"
+      "back": "$T_n = a + (n-1)d$<br>$S_n = \\frac{n}{2}[2a + (n-1)d]$"
     },
     {
       "front": "Geometric Sequence Formula",
-      "back": "Tₙ = arⁿ⁻¹<br>Sn = a(rⁿ-1)/(r-1), r≠1<br>S∞ = a/(1-r), |r|<1"
+      "back": "$T_n = ar^{n-1}$<br>$S_n = a\\frac{r^n-1}{r-1}, r \\neq 1$<br>$S_\\infty = \\frac{a}{1-r}, |r| < 1$"
     },
     {
       "front": "AM-GM-HM Relation",
-      "back": "AM × HM = GM²<br>AM ≥ GM ≥ HM"
+      "back": "$AM \\times HM = GM^2$<br>$AM \\geq GM \\geq HM$"
     },
     {
       "front": "Matrix Determinant (2×2)",
-      "back": "|A| = ad - bc<br>For [[a,b],[c,d]]"
+      "back": "$|A| = ad - bc$<br>For $\\begin{pmatrix}a & b\\\\ c & d\\end{pmatrix}$"
     },
     {
       "front": "Inverse of 2×2 Matrix",
-      "back": "A⁻¹ = (1/det) × [[d,-b],[-c,a]]"
+      "back": "$A^{-1} = \\frac{1}{det(A)} \\begin{pmatrix}d & -b\\\\ -c & a\\end{pmatrix}$"
     },
     {
       "front": "Quadratic Roots Formula",
-      "back": "x = [-b ± √(b²-4ac)]/2a<br>Sum = -b/a, Product = c/a"
+      "back": "$x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$<br>Sum $= -\\frac{b}{a}$, Product $= \\frac{c}{a}$"
     },
     {
       "front": "Complex Number Operations",
-      "back": "z = a + bi<br>|z| = √(a²+b²)<br>z̄ = a - bi<br>z × z̄ = |z|²"
+      "back": "$z = a + bi$<br>$|z| = \\sqrt{a^2+b^2}$<br>$\\bar{z} = a - bi$<br>$z \\times \\bar{z} = |z|^2$"
     },
     {
       "front": "Derivative Formulas",
-      "back": "d/dx(xⁿ) = nxⁿ⁻¹<br>d/dx(sin x) = cos x<br>d/dx(cos x) = -sin x<br>d/dx(eˣ) = eˣ<br>d/dx(ln x) = 1/x"
+      "back": "$\\frac{d}{dx}(x^n) = nx^{n-1}$<br>$\\frac{d}{dx}(\\sin x) = \\cos x$<br>$\\frac{d}{dx}(\\cos x) = -\\sin x$<br>$\\frac{d}{dx}(e^x) = e^x$<br>$\\frac{d}{dx}(\\ln x) = \\frac{1}{x}$"
     },
     {
       "front": "Integration Formulas",
-      "back": "∫xⁿdx = xⁿ⁺¹/(n+1) + C<br>∫eˣdx = eˣ + C<br>∫sin x dx = -cos x + C<br>∫cos x dx = sin x + C<br>∫1/x dx = ln|x| + C"
+      "back": "$\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$<br>$\\int e^x dx = e^x + C$<br>$\\int \\sin x \\, dx = -\\cos x + C$<br>$\\int \\cos x \\, dx = \\sin x + C$<br>$\\int \\frac{1}{x} dx = \\ln|x| + C$"
     },
     {
       "front": "Chain Rule",
-      "back": "d/dx[f(g(x))] = f'(g(x)) × g'(x)"
+      "back": "$\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\times g'(x)$"
     },
     {
       "front": "Product Rule",
-      "back": "d/dx(uv) = u'v + uv'"
+      "back": "$\\frac{d}{dx}(uv) = u'v + uv'$"
     },
     {
       "front": "Quotient Rule",
-      "back": "d/dx(u/v) = (u'v - uv')/v²"
+      "back": "$\\frac{d}{dx}\\left(\\frac{u}{v}\\right) = \\frac{u'v - uv'}{v^2}$"
     },
     {
       "front": "Probability Laws",
-      "back": "P(A∪B) = P(A) + P(B) - P(A∩B)<br>P(A∩B) = P(A) × P(B) (independent)<br>P(A/B) = P(A∩B)/P(B)"
+      "back": "$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$<br>$P(A \\cap B) = P(A) \\times P(B)$ (independent)<br>$P(A|B) = \\frac{P(A \\cap B)}{P(B)}$"
     },
     {
       "front": "Standard Deviation",
-      "back": "σ = √[Σ(x - x̄)²/n]<br>Variance = σ²<br>CV = (σ/x̄) × 100%"
+      "back": "$\\sigma = \\sqrt{\\frac{\\sum(x - \\bar{x})^2}{n}}$<br>Variance $= \\sigma^2$<br>$CV = \\frac{\\sigma}{\\bar{x}} \\times 100\\%$"
     },
     {
       "front": "Distance Formula",
-      "back": "d = √[(x₂-x₁)² + (y₂-y₁)²]<br>3D: d = √[(x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²]"
+      "back": "$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$<br>3D: $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}$"
     },
     {
       "front": "Point to Line Distance",
-      "back": "d = |Ax₀ + By₀ + C|/√(A² + B²)"
+      "back": "$d = \\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}$"
     },
     {
       "front": "Basic Limits",
-      "back": "lim(x→0) sin x/x = 1<br>lim(x→0) (eˣ-1)/x = 1<br>lim(x→0) (1+x)^(1/x) = e"
+      "back": "$\\lim_{x \\to 0} \\frac{\\sin x}{x} = 1$<br>$\\lim_{x \\to 0} \\frac{e^x-1}{x} = 1$<br>$\\lim_{x \\to 0} (1+x)^{1/x} = e$"
     },
     {
       "front": "Inverse Trig Relations",
-      "back": "sin⁻¹x + cos⁻¹x = π/2<br>tan⁻¹x + cot⁻¹x = π/2<br>sin⁻¹(-x) = -sin⁻¹x"
+      "back": "$\\sin^{-1}x + \\cos^{-1}x = \\frac{\\pi}{2}$<br>$\\tan^{-1}x + \\cot^{-1}x = \\frac{\\pi}{2}$<br>$\\sin^{-1}(-x) = -\\sin^{-1}x$"
     }
   ],
   "cheatsheet": [
@@ -641,69 +401,36 @@
       "title": "Must-Know Formulas",
       "icon": "formula",
       "items": [
-        "<strong>Quadratic:</strong> x = [-b ± √(b²-4ac)]/2a",
-        "<strong>Arithmetic:</strong> Tₙ = a + (n-1)d, Sₙ = n/2[2a + (n-1)d]",
-        "<strong>Geometric:</strong> Tₙ = arⁿ⁻¹, Sₙ = a(rⁿ-1)/(r-1)",
-        "<strong>Derivative:</strong> d/dx(xⁿ) = nxⁿ⁻¹",
-        "<strong>Integration:</strong> ∫xⁿdx = xⁿ⁺¹/(n+1) + C",
-        "<strong>Standard Deviation:</strong> √[Σ(x-x̄)²/n]",
-        "<strong>Probability:</strong> P(A∪B) = P(A) + P(B) - P(A∩B)",
-        "<strong>Distance:</strong> d = √[(x₂-x₁)² + (y₂-y₁)²]"
+        "<strong>Quadratic:</strong> $x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$",
+        "<strong>Arithmetic:</strong> $T_n = a + (n-1)d$, $S_n = \\frac{n}{2}[2a + (n-1)d]$",
+        "<strong>Geometric:</strong> $T_n = ar^{n-1}$, $S_n = a\\frac{r^n-1}{r-1}$",
+        "<strong>Derivative:</strong> $\\frac{d}{dx}(x^n) = nx^{n-1}$",
+        "<strong>Integration:</strong> $\\int x^n dx = \\frac{x^{n+1}}{n+1} + C$",
+        "<strong>Standard Deviation:</strong> $\\sqrt{\\frac{\\sum(x-\\bar{x})^2}{n}}$",
+        "<strong>Probability:</strong> $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$",
+        "<strong>Distance:</strong> $d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$"
       ]
     },
     {
       "title": "Trigonometric Values",
       "icon": "trig",
       "items": [
-        "<strong>sin 0° = 0, sin 30° = 1/2, sin 45° = 1/√2, sin 60° = √3/2, sin 90° = 1</strong>",
-        "<strong>cos 0° = 1, cos 30° = √3/2, cos 45° = 1/√2, cos 60° = 1/2, cos 90° = 0</strong>",
-        "<strong>tan 0° = 0, tan 30° = 1/√3, tan 45° = 1, tan 60° = √3</strong>",
-        "<strong>Pythagorean:</strong> sin²x + cos²x = 1, tan²x + 1 = sec²x"
+        "<strong>sin:</strong> $0=0$, $30^\\circ=\\frac{1}{2}$, $45^\\circ=\\frac{1}{\\sqrt{2}}$, $60^\\circ=\\frac{\\sqrt{3}}{2}$, $90^\\circ=1$",
+        "<strong>cos:</strong> $0=1$, $30^\\circ=\\frac{\\sqrt{3}}{2}$, $45^\\circ=\\frac{1}{\\sqrt{2}}$, $60^\\circ=\\frac{1}{2}$, $90^\\circ=0$",
+        "<strong>tan:</strong> $0=0$, $30^\\circ=\\frac{1}{\\sqrt{3}}$, $45^\\circ=1$, $60^\\circ=\\sqrt{3}$",
+        "<strong>Pythagorean:</strong> $\\sin^2x + \\cos^2x = 1$, $\\tan^2x + 1 = \\sec^2x$"
       ]
     },
     {
       "title": "Common Mistakes to Avoid",
       "icon": "warning",
       "items": [
-        "<strong>Don't confuse:</strong> derivative of x² is 2x, not x",
-        "<strong>Don't forget:</strong> +C in integration",
-        "<strong>Don't forget:</strong> modulus in distance formula",
-        "<strong>Remember:</strong> sin⁻¹x ≠ 1/sin x (that's csc)",
-        "<strong>Remember:</strong> AM ≥ GM ≥ HM always",
-        "<strong>Remember:</strong> |z| is always non-negative"
-      ]
-    },
-    {
-      "title": "Calculus: Limits & Derivatives",
-      "icon": "calculator",
-      "items": [
-        "<strong>Limits:</strong> \\( \\lim_{x \\to 0} \\frac{\\sin x}{x} = 1 \\)",
-        "<strong>Limits:</strong> \\( \\lim_{x \\to 0} \\frac{e^x - 1}{x} = 1 \\)",
-        "<strong>Chain Rule:</strong> \\( \\frac{d}{dx}[f(g(x))] = f'(g(x))g'(x) \\)",
-        "<strong>Product Rule:</strong> \\( \\frac{d}{dx}(uv) = u\\frac{dv}{dx} + v\\frac{du}{dx} \\)",
-        "<strong>Quotient Rule:</strong> \\( \\frac{d}{dx}(\\frac{u}{v}) = \\frac{v\\frac{du}{dx} - u\\frac{dv}{dx}}{v^2} \\)"
-      ]
-    },
-    {
-      "title": "Analytic Geometry (Straight Lines)",
-      "icon": "chart-line",
-      "items": [
-        "<strong>Distance between points:</strong> \\( d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} \\)",
-        "<strong>Mid-point formula:</strong> \\( (\\frac{x_1+x_2}{2}, \\frac{y_1+y_2}{2}) \\)",
-        "<strong>Slope of line:</strong> \\( m = \\frac{y_2-y_1}{x_2-x_1} = -\\frac{A}{B} \\)",
-        "<strong>Angle between lines:</strong> \\( \\tan \\theta = \\pm \\frac{m_1-m_2}{1+m_1 m_2} \\)",
-        "<strong>Perpendicular Distance:</strong> \\( d = \\frac{|Ax_1+By_1+C|}{\\sqrt{A^2+B^2}} \\)"
-      ]
-    },
-    {
-      "title": "Vectors & 3D Geometry",
-      "icon": "arrow-up-right",
-      "items": [
-        "<strong>Dot Product:</strong> \\( \\vec{a} \\cdot \\vec{b} = |\\vec{a}||\\vec{b}|\\cos \\theta \\)",
-        "<strong>Cross Product:</strong> \\( |\\vec{a} \\times \\vec{b}| = |\\vec{a}||\\vec{b}|\\sin \\theta \\)",
-        "<strong>Direction Cosines:</strong> \\( l = \\cos \\alpha, m = \\cos \\beta, n = \\cos \\gamma \\)",
-        "<strong>Relation of DC:</strong> \\( l^2 + m^2 + n^2 = 1 \\)",
-        "<strong>Collinear vectors condition:</strong> \\( \\vec{a} = k\\vec{b} \\)"
+        "<strong>Don't confuse:</strong> derivative of $x^2$ is $2x$, not $x$",
+        "<strong>Don't forget:</strong> $+C$ in integration",
+        "<strong>Don't forget:</strong> absolute value in distance formula",
+        "<strong>Remember:</strong> $\\sin^{-1}x \\neq \\frac{1}{\\sin x}$ (that's $\\csc x$)",
+        "<strong>Remember:</strong> $AM \\geq GM \\geq HM$ always",
+        "<strong>Remember:</strong> $|z|$ is always non-negative"
       ]
     }
   ],
@@ -715,14 +442,14 @@
         "questions": [
           "Sum of first 20 odd numbers? (400)",
           "If A.M = 8, G.M = 4, then H.M = ? (2)",
-          "Derivative of e^2x? (2e^2x)",
-          "∫dx from 0 to 1? (1)",
-          "|3+4i| = ? (5)",
-          "sin(90°-30°) = ? (1/2)",
-          "Roots of x²-4=0? (±2)",
-          "P(A)=0.3, P(B)=0.4, independent → P(A∩B)? (0.12)",
-          "d/dx(ln x) = ? (1/x)",
-          "lim(x→0) sin x/x = ? (1)",
+          "Derivative of $e^{2x}$? ($2e^{2x}$)",
+          "$\\int_0^1 dx$? (1)",
+          "$|3+4i| = $ ? (5)",
+          "$\\sin(90^\\circ-30^\\circ) = $ ? ($\\frac{1}{2}$)",
+          "Roots of $x^2-4=0$? ($\\pm 2$)",
+          "$P(A)=0.3$, $P(B)=0.4$, independent → $P(A \\cap B)$? (0.12)",
+          "$\\frac{d}{dx}(\\ln x) = $ ? ($\\frac{1}{x}$)",
+          "$\\lim_{x \\to 0} \\frac{\\sin x}{x} = $ ? (1)",
           "Variance of 2,4,6,8,10? (8)"
         ]
       },
