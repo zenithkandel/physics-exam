@@ -164,7 +164,7 @@ function renderDashboard() {
   getEl("mainContent").innerHTML = `
     <div class="dashboard-header">
       <h1>Dashboard</h1>
-      <p>Track your chemistry exam preparation</p>
+      <p>Track your mathematics exam preparation</p>
     </div>
     <div class="stats-grid">
       <div class="stat-card">
@@ -574,7 +574,7 @@ function toggleChapter(key, e) {
   } else {
     completedTopics[key] = true;
   }
-  localStorage.setItem("chemcrash_completed", JSON.stringify(completedTopics));
+  localStorage.setItem("mathscrash_completed", JSON.stringify(completedTopics));
   renderSyllabus();
 }
 
@@ -587,7 +587,7 @@ function toggleTopic(key, e) {
   } else {
     completedTopics[key] = true;
   }
-  localStorage.setItem("chemcrash_completed", JSON.stringify(completedTopics));
+  localStorage.setItem("mathscrash_completed", JSON.stringify(completedTopics));
   renderSyllabus();
 }
 
@@ -843,7 +843,7 @@ function resumeQuiz() {
 
 function init() {
   loadData().then(() => {
-    const savedPage = sessionStorage.getItem("chemcrash_currentPage") || "dashboard";
+    const savedPage = sessionStorage.getItem("mathscrash_currentPage") || "dashboard";
     navigateTo(savedPage);
 
     document.querySelectorAll(".nav-item").forEach(btn => {
