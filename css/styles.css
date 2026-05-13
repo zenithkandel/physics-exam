@@ -1722,7 +1722,8 @@ i.fa {
   }
 
   .search-box {
-    display: none;
+    display: flex;
+    width: 140px;
   }
 
   .content-grid {
