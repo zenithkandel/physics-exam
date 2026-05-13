@@ -1,6 +1,6 @@
 let allQuestions = [], flashcardData = [], cheatSections = [], modelPaperData = {}, examTipsData = {}, syllabusData = {};
-let totalXP = parseInt(localStorage.getItem("chemcrash_xp") || "0");
-let streak = 0, bestStreak = parseInt(localStorage.getItem("chemcrash_bestStreak") || "0");
+let totalXP = parseInt(localStorage.getItem("mathscrash_xp") || "0");
+let streak = 0, bestStreak = parseInt(localStorage.getItem("mathscrash_bestStreak") || "0");
 let correctCount = 0, totalAttempted = 0, currentQIndex = 0, quizActive = false;
 let timerInterval = null, timeLeft = 20;
 const questionsPerRound = Infinity;
@@ -8,8 +8,8 @@ let roundQuestions = [];
 let isQuizPaused = false;
 let savedTimeLeft = 20;
 let quizTabLeft = false;
-let completedTopics = JSON.parse(localStorage.getItem("chemcrash_completed") || "{}");
-let expandedUnits = JSON.parse(localStorage.getItem("chemcrash_expanded") || "{}");
+let completedTopics = JSON.parse(localStorage.getItem("mathscrash_completed") || "{}");
+let expandedUnits = JSON.parse(localStorage.getItem("mathscrash_expanded") || "{}");
 let scrollTarget = null;
 
 function getEl(id) { return document.getElementById(id); }
