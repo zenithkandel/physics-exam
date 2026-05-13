@@ -79,12 +79,26 @@ function shuffle(arr) {
   return a;
 }
 
+function updateMath() {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\(', right: '\\)', display: false},
+        {left: '\\[', right: '\\]', display: true}
+      ],
+      throwOnError: false
+    });
+  }
+}
+
 function navigateTo(page) {
   sessionStorage.setItem("mathscrash_currentPage", page);
   document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("active"));
   document.querySelectorAll(".bottom-nav-item").forEach(item => item.classList.remove("active"));
-  document.querySelector(`.sidebar .nav-item[data-page="${page}"]`)?.classList.add("active");
-  document.querySelector(`.bottom-nav-item[data-page="${page}"]`)?.classList.add("active");
+  document.querySelector(`.sidebar .nav-item[data-page="\${page}"]`)?.classList.add("active");
+  document.querySelector(`.bottom-nav-item[data-page="\${page}"]`)?.classList.add("active");
   const titleEl = getEl("topbar-title");
   if (titleEl) titleEl.textContent = page.charAt(0).toUpperCase() + page.slice(1);
   const mainContent = getEl("mainContent");
@@ -109,7 +123,7 @@ function navigateTo(page) {
           <i class="fa-light fa-gamepad-modern"></i>
           <h3>Welcome Back!</h3>
           <p>Your quiz progress has been saved.</p>
-          <div class="progress-info" id="resumeProgress">Question ${currentQIndex + 1} of ${roundQuestions.length}</div>
+          <div class="progress-info" id="resumeProgress">Question \${currentQIndex + 1} of \${roundQuestions.length}</div>
           <div class="actions">
             <button class="btn btn-outline" onclick="restartQuiz()">Start New</button>
             <button class="btn btn-primary" onclick="resumeQuizFromModal()">Resume Quiz</button>
@@ -117,6 +131,7 @@ function navigateTo(page) {
         </div>
       </div>
     </div>`;
+    updateMath();
     return;
   }
 
@@ -131,6 +146,7 @@ function navigateTo(page) {
     case "practicals": renderPracticals(); break;
     case "settings": renderSettings(); break;
   }
+  updateMath();
 }
 
 function resumeQuizFromModal() {
@@ -342,6 +358,7 @@ function renderQuestion() {
   }
   if (skipBtn) skipBtn.style.display = "inline-flex";
   startTimer();
+  updateMath();
 }
 
 function startTimer() {
