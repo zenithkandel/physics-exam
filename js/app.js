@@ -205,7 +205,7 @@ function renderDashboard() {
         <h4>Exam Information</h4>
         <div class="overview-list">
           <div class="overview-list-item"><span>Board</span><span>${meta.board || 'NEB'}</span></div>
-          <div class="overview-list-item"><span>Subject</span><span>${meta.exam_context || 'Chemistry'}</span></div>
+          <div class="overview-list-item"><span>Subject</span><span>${meta.exam_context || 'Mathematics'}</span></div>
           <div class="overview-list-item"><span>Academic Year</span><span>${meta.academic_year_bs || '2082'}</span></div>
           <div class="overview-list-item"><span>Working Hours</span><span>${meta.notes?.match(/\d+/)?.[0] || '160'}</span></div>
         </div>
