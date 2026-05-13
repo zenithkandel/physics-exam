@@ -213,10 +213,10 @@ function renderDashboard() {
       <div class="overview-card">
         <h4>Exam Breakdown</h4>
         <div class="overview-list">
-          <div class="overview-list-item"><span>Theory</span><span>75 marks</span></div>
-          <div class="overview-list-item"><span>Practical</span><span>25 marks</span></div>
-          <div class="overview-list-item"><span>Passing Target</span><span>55+ marks</span></div>
+          <div class="overview-list-item"><span>Theory</span><span>100 marks</span></div>
+          <div class="overview-list-item"><span>Passing Target</span><span>35+ marks</span></div>
           <div class="overview-list-item"><span>Total Questions</span><span>${allQuestions.length}</span></div>
+          <div class="overview-list-item"><span>Quiz Questions</span><span>50 MCQs</span></div>
         </div>
       </div>
     </div>

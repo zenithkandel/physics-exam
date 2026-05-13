@@ -1,0 +1,402 @@
+{
+  "meta": {
+    "country": "Nepal",
+    "board": "NEB",
+    "exam_context": "HISSAN Grade 11 Mathematics",
+    "academic_year_bs": "2082",
+    "notes": "The syllabus is based on the NEB curriculum for Grade 11 Mathematics. The final theoretical exam is for 100 marks."
+  },
+  "syllabus": [
+    {
+      "unit_number": 1,
+      "unit_name": "Algebra",
+      "estimated_weightage_percent": 30,
+      "importance_level": "Very High",
+      "chapters": [
+        {
+          "chapter_name": "Logic and Set Theory",
+          "importance_level": "Medium",
+          "estimated_exam_weight": "3-4 marks",
+          "topics": [
+            {
+              "topic_name": "Connectives and Truth Tables",
+              "priority": "Medium",
+              "subtopics": ["Propositional logic", "Truth tables", "Logical connectives"]
+            },
+            {
+              "topic_name": "Set Theory",
+              "priority": "High",
+              "subtopics": ["Set identities", "Venn diagrams", "Operations on sets"]
+            }
+          ],
+          "important_numericals": []
+        },
+        {
+          "chapter_name": "Relations and Functions",
+          "importance_level": "Very High",
+          "estimated_exam_weight": "8-10 marks",
+          "topics": [
+            {
+              "topic_name": "Relations and Types of Relations",
+              "priority": "High",
+              "subtopics": ["Domain and range", "Types of relations"]
+            },
+            {
+              "topic_name": "Functions",
+              "priority": "Very High",
+              "subtopics": ["Types of functions", "Inverse functions", "Composite functions", "Odd/Even functions", "Periodic functions", "Monotonicity"]
+            }
+          ],
+          "important_numericals": ["Finding domain and range", "Inverse function calculations"]
+        },
+        {
+          "chapter_name": "Sequences and Series",
+          "priority": "Very High",
+          "estimated_exam_weight": "6-8 marks",
+          "topics": [
+            {
+              "topic_name": "Arithmetic Sequence",
+              "priority": "High",
+              "subtopics": ["nth term", "Sum of n terms"]
+            },
+            {
+              "topic_name": "Geometric Sequence",
+              "priority": "High",
+              "subtopics": ["nth term", "Sum of n terms", "Infinite geometric series"]
+            },
+            {
+              "topic_name": "Harmonic Sequence",
+              "priority": "Medium",
+              "subtopics": ["nth term", "Harmonic mean"]
+            },
+            {
+              "topic_name": "AM, GM, HM",
+              "priority": "High",
+              "subtopics": ["Relation between AM, GM, HM"]
+            }
+          ],
+          "important_numericals": ["Sum of infinite geometric series", "AM-GM-HM problems"]
+        },
+        {
+          "chapter_name": "Matrices and Determinants",
+          "importance_level": "Very High",
+          "estimated_exam_weight": "8-10 marks",
+          "topics": [
+            {
+              "topic_name": "Types of Matrices",
+              "priority": "High",
+              "subtopics": ["Transpose", "Symmetric", "Skew-symmetric"]
+            },
+            {
+              "topic_name": "Determinants",
+              "priority": "Very High",
+              "subtopics": ["Minors", "Cofactors", "Adjoint", "Inverse of matrix"]
+            },
+            {
+              "topic_name": "Properties of Determinants",
+              "priority": "High",
+              "subtopics": ["Solving problems using determinant properties"]
+            }
+          ],
+          "important_numericals": ["Matrix inverse", "System of linear equations"]
+        },
+        {
+          "chapter_name": "Polynomial Equations",
+          "importance_level": "High",
+          "estimated_exam_weight": "5-6 marks",
+          "topics": [
+            {
+              "topic_name": "Quadratic Equations",
+              "priority": "Very High",
+              "subtopics": ["Roots and coefficients", "Forming quadratic equations"]
+            },
+            {
+              "topic_name": "Complex Numbers",
+              "priority": "High",
+              "subtopics": ["Algebra of complex numbers", "Conjugate", "Modulus", "Square root of complex numbers"]
+            }
+          ],
+          "important_numericals": ["Finding roots", "Complex number operations"]
+        }
+      ]
+    },
+    {
+      "unit_number": 2,
+      "unit_name": "Trigonometry",
+      "estimated_weightage_percent": 12,
+      "importance_level": "High",
+      "chapters": [
+        {
+          "chapter_name": "Inverse Trigonometric Functions",
+          "importance_level": "High",
+          "estimated_exam_weight": "6-8 marks",
+          "topics": [
+            {
+              "topic_name": "Properties of Inverse Trigonometric Functions",
+              "priority": "High",
+              "subtopics": ["Relations between inverse trig functions", "Simplification"]
+            }
+          ],
+          "important_numericals": ["Proving identities", "Evaluating expressions"]
+        },
+        {
+          "chapter_name": "Trigonometric Equations",
+          "importance_level": "High",
+          "estimated_exam_weight": "4-5 marks",
+          "topics": [
+            {
+              "topic_name": "General Solution",
+              "priority": "High",
+              "subtopics": ["General solutions of trigonometric equations"]
+            }
+          ],
+          "important_numericals": ["Finding general solutions"]
+        }
+      ]
+    },
+    {
+      "unit_number": 3,
+      "unit_name": "Analytic Geometry",
+      "estimated_weightage_percent": 15,
+      "importance_level": "High",
+      "chapters": [
+        {
+          "chapter_name": "Straight Lines",
+          "importance_level": "High",
+          "estimated_exam_weight": "5-6 marks",
+          "topics": [
+            {
+              "topic_name": "Distance and Angle",
+              "priority": "High",
+              "subtopics": ["Perpendicular distance", "Angle bisectors"]
+            }
+          ],
+          "important_numericals": ["Distance from point to line"]
+        },
+        {
+          "chapter_name": "Pair of Straight Lines",
+          "importance_level": "Medium",
+          "estimated_exam_weight": "4-5 marks",
+          "topics": [
+            {
+              "topic_name": "Homogeneous Equations",
+              "priority": "Medium",
+              "subtopics": ["Condition for pair of lines", "Angle between lines", "Bisectors"]
+            }
+          ],
+          "important_numericals": ["Angle between pair of lines"]
+        },
+        {
+          "chapter_name": "Three Dimensional Geometry",
+          "importance_level": "Medium",
+          "estimated_exam_weight": "3-4 marks",
+          "topics": [
+            {
+              "topic_name": "Coordinates in Space",
+              "priority": "Medium",
+              "subtopics": ["Distance between two points", "Direction cosines", "Direction ratios"]
+            }
+          ],
+          "important_numericals": ["3D distance formula"]
+        }
+      ]
+    },
+    {
+      "unit_number": 4,
+      "unit_name": "Vectors",
+      "estimated_weightage_percent": 10,
+      "importance_level": "Medium",
+      "chapters": [
+        {
+          "chapter_name": "Vector Basics",
+          "importance_level": "High",
+          "estimated_exam_weight": "5-6 marks",
+          "topics": [
+            {
+              "topic_name": "Types of Vectors",
+              "priority": "High",
+              "subtopics": ["Collinear and non-collinear", "Coplanar and non-coplanar"]
+            },
+            {
+              "topic_name": "Linear Combination",
+              "priority": "High",
+              "subtopics": ["Linear combination of vectors"]
+            },
+            {
+              "topic_name": "Linearly Dependent Vectors",
+              "priority": "Medium",
+              "subtopics": ["Linear dependence and independence"]
+            }
+          ],
+          "important_numericals": []
+        }
+      ]
+    },
+    {
+      "unit_number": 5,
+      "unit_name": "Statistics and Probability",
+      "estimated_weightage_percent": 13,
+      "importance_level": "High",
+      "chapters": [
+        {
+          "chapter_name": "Statistics",
+          "importance_level": "High",
+          "estimated_exam_weight": "5-6 marks",
+          "topics": [
+            {
+              "topic_name": "Measures of Dispersion",
+              "priority": "Very High",
+              "subtopics": ["Standard deviation", "Variance", "Coefficient of variation"]
+            },
+            {
+              "topic_name": "Skewness",
+              "priority": "Medium",
+              "subtopics": ["Karl Pearson's coefficient of skewness"]
+            }
+          ],
+          "important_numericals": ["Standard deviation calculation", "Variance", "Coefficient of variation"]
+        },
+        {
+          "chapter_name": "Probability",
+          "importance_level": "High",
+          "estimated_exam_weight": "6-8 marks",
+          "topics": [
+            {
+              "topic_name": "Basic Probability",
+              "priority": "High",
+              "subtopics": ["Sample space", "Events", "Mutually exclusive", "Exhaustive"]
+            },
+            {
+              "topic_name": "Laws of Probability",
+              "priority": "Very High",
+              "subtopics": ["Addition law", "Multiplication law", "Independent and dependent events"]
+            }
+          ],
+          "important_numericals": ["Probability calculations", "Conditional probability"]
+        }
+      ]
+    },
+    {
+      "unit_number": 6,
+      "unit_name": "Calculus",
+      "estimated_weightage_percent": 20,
+      "importance_level": "Very High",
+      "chapters": [
+        {
+          "chapter_name": "Limits and Continuity",
+          "importance_level": "Very High",
+          "estimated_exam_weight": "8-10 marks",
+          "topics": [
+            {
+              "topic_name": "Limits",
+              "priority": "Very High",
+              "subtopics": ["Definition", "Indeterminate forms", "Algebraic properties"]
+            },
+            {
+              "topic_name": "Continuity",
+              "priority": "High",
+              "subtopics": ["Testing continuity", "Types of discontinuity"]
+            }
+          ],
+          "important_numericals": ["Evaluating limits", "L'Hospital's rule"]
+        },
+        {
+          "chapter_name": "Derivatives",
+          "importance_level": "Very High",
+          "estimated_exam_weight": "10-12 marks",
+          "topics": [
+            {
+              "topic_name": "First Principle",
+              "priority": "High",
+              "subtopics": ["Derivative from first principle"]
+            },
+            {
+              "topic_name": "Rules of Differentiation",
+              "priority": "Very High",
+              "subtopics": ["Chain rule", "Product rule", "Quotient rule", "Power rule"]
+            },
+            {
+              "topic_name": "Applications",
+              "priority": "Very High",
+              "subtopics": ["Monotonicity", "Extreme values", "Concavity"]
+            }
+          ],
+          "important_numericals": ["Derivative calculations", "Maxima and minima"]
+        },
+        {
+          "chapter_name": "Integration",
+          "importance_level": "High",
+          "estimated_exam_weight": "8-10 marks",
+          "topics": [
+            {
+              "topic_name": "Basic Integration",
+              "priority": "High",
+              "subtopics": ["Integration as reverse of differentiation"]
+            },
+            {
+              "topic_name": "Methods of Integration",
+              "priority": "High",
+              "subtopics": ["Substitution", "By parts"]
+            },
+            {
+              "topic_name": "Definite Integration",
+              "priority": "High",
+              "subtopics": ["Properties", "Area under curves"]
+            }
+          ],
+          "important_numericals": ["Area between curves", "Definite integral evaluation"]
+        }
+      ]
+    }
+  ],
+  "high_weight_topics": [
+    {
+      "topic": "Limits and Continuity",
+      "estimated_frequency": "Very Frequent",
+      "difficulty": "High"
+    },
+    {
+      "topic": "Differentiation",
+      "estimated_frequency": "Always",
+      "difficulty": "High"
+    },
+    {
+      "topic": "Integration",
+      "estimated_frequency": "Always",
+      "difficulty": "High"
+    },
+    {
+      "topic": "Matrices and Determinants",
+      "estimated_frequency": "Very Frequent",
+      "difficulty": "Medium"
+    },
+    {
+      "topic": "Sequence and Series",
+      "estimated_frequency": "Frequent",
+      "difficulty": "Medium"
+    },
+    {
+      "topic": "Probability",
+      "estimated_frequency": "Frequent",
+      "difficulty": "Medium"
+    }
+  ],
+  "study_strategy": {
+    "chapters_to_finish_first": [
+      "Calculus (Limits, Differentiation, Integration)",
+      "Matrices and Determinants",
+      "Sequence and Series"
+    ],
+    "chapters_for_numericals": [
+      "Calculus",
+      "Matrices and Determinants",
+      "Statistics"
+    ],
+    "last_minute_revision_topics": [
+      "Differentiation formulas",
+      "Integration formulas",
+      "Standard deviation calculations",
+      "Probability rules"
+    ]
+  }
+}
