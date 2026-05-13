@@ -80,7 +80,7 @@ function shuffle(arr) {
 }
 
 function updateMath() {
-  if (window.renderMathInElement) {
+  if (typeof renderMathInElement === 'function') {
     renderMathInElement(document.body, {
       delimiters: [
         { left: '$$', right: '$$', display: true },
@@ -88,7 +88,25 @@ function updateMath() {
         { left: '\\(', right: '\\)', display: false },
         { left: '\\[', right: '\\]', display: true }
       ],
-      throwOnError: false
+      throwOnError: false,
+      trust: true,
+      strict: false
+    });
+  }
+}
+
+function renderMathInContainer(container) {
+  if (typeof renderMathInElement === 'function') {
+    renderMathInElement(container, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false },
+        { left: '\\(', right: '\\)', display: false },
+        { left: '\\[', right: '\\]', display: true }
+      ],
+      throwOnError: false,
+      trust: true,
+      strict: false
     });
   }
 }
