@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "subject": "Mathematics",
+    "grade": "11",
+    "board": "NEB (National Examination Board, Nepal)",
+    "description": "Syllabus for Grade 11 Mathematics as per NEB curriculum.",
+    "version": "1.0",
+    "generated_at": "2026-05-13T07:14:12Z"
+  },
+  "units": [
+    {
+      "unit_number": 1,
+      "unit_name": "Algebra",
+      "topics": [
+        "1.1 Be acquainted connectives and construct truth tables.",
+        "1.2 Prove set identities.",
+        "1.3 Define interval and absolute value of real numbers.",
+        "1.4 Find domain and range of a function.",
+        "1.5 Find inverse function and calculate composite function of given functions.",
+        "1.6 Define odd and even functions, periodicity of a function, and monotonicity of a function.",
+        "1.7 Sketch graphs of Quadratic, Cubic and rational functions of the form 1/(ax + b) where a ≠ 0, Trigonometric (a sin bx and a cos bx), exponential (eˣ), logarithmic function (ln x).",
+        "1.8 Define and classify sequence and series.",
+        "1.9 Solve the problems related to arithmetic, geometric and harmonic sequences and series.",
+        "1.10 Establish relation among A.M, G.M and H.M.",
+        "1.11 Find the sum of infinite geometric series.",
+        "1.12 Obtain transpose of matrix and verify its properties.",
+        "1.13 Calculate minors, cofactors, adjoint, determinant and inverse of a square matrix.",
+        "1.14 Solve the problems using properties of determinants.",
+        "1.15 Define polynomial function and polynomial equation.",
+        "1.16 State and apply fundamental theorem of algebra.",
+        "1.17 Find roots of a quadratic equation and establish the relation between roots and coefficient.",
+        "1.18 Form a quadratic equation with given roots.",
+        "1.19 Define a complex number and solve the problems related to algebra of complex numbers.",
+        "1.20 Find conjugate and absolute (modulus) value of a complex numbers and verify their properties.",
+        "1.21 Find square root of a complex number."
+      ]
+    },
+    {
+      "unit_number": 2,
+      "unit_name": "Trigonometry",
+      "topics": [
+        "2.1 Define inverse trigonometric functions and establish the relations on inverse trigonometric functions.",
+        "2.2 Find the general solution of trigonometric equations."
+      ]
+    },
+    {
+      "unit_number": 3,
+      "unit_name": "Analytic geometry",
+      "topics": [
+        "3.1 Find the length of perpendicular from a given point to a given line.",
+        "3.2 Find the equation of bisectors of the angles between two straight lines.",
+        "3.3 Write the condition of general equation of second degree in x and y to represent a pair of straight lines.",
+        "3.4 Find angle between pair of lines and bisectors of the angles between pair of lines given by homogeneous second degree equation in x and y.",
+        "3.5 Find the distance between two points in space, and direction cosines and ratios of a line."
+      ]
+    },
+    {
+      "unit_number": 4,
+      "unit_name": "Vectors",
+      "topics": [
+        "4.1 Identify collinear and non-collinear vectors.",
+        "4.2 Identify coplanar and non-coplanar vectors.",
+        "4.3 Write linear combination of vectors.",
+        "4.4 Identify linearly dependent and independent of vectors."
+      ]
+    },
+    {
+      "unit_number": 5,
+      "unit_name": "Statistics and Probability",
+      "topics": [
+        "5.1 Calculate standard deviation, variance and coefficient of variation.",
+        "5.3 Calculate coefficient of skewness by Karl Pearson method.",
+        "5.4 Define random experiment, sample space, event, equally likely cases, mutually exclusive events, exhaustive cases, favorable cases, independent and dependent events.",
+        "5.5 Find the probability using two basic laws of probability."
+      ]
+    },
+    {
+      "unit_number": 6,
+      "unit_name": "Calculus",
+      "topics": [
+        "6.1 Define limits of a function.",
+        "6.2 Identify indeterminate forms.",
+        "6.3 Apply algebraic properties of limits.",
+        "6.4 Evaluate limits by using theorems on limits of algebraic, trigonometric, exponential and logarithmic functions.",
+        "6.5 Define and test continuity of a function.",
+        "6.6 Define and classify discontinuity.",
+        "6.7 Interpret derivatives geometrically.",
+        "6.8 Find the derivatives of a function by the first principle (algebraic, trigonometric, inverse trigonometric, exponential and logarithmic functions).",
+        "6.9 Find the derivatives by using rules of differentiation (sum, difference, constant multiple, chain rule, product rule, quotient rule, power and general power rules).",
+        "6.10 Find the derivatives of parametric and implicit functions.",
+        "6.11 Calculate higher order derivatives.",
+        "6.12 Check the monotonicity of a function using derivative.",
+        "6.13 Find extreme values of a function.",
+        "6.14 Find the concavity of function by using derivative.",
+        "6.15 Define integration as reverse of differentiation.",
+        "6.16 Evaluate the integral using basic integrals.",
+        "6.17 Integrate by substitution and by parts method.",
+        "6.18 Evaluate the definite integral.",
+        "6.19 Find area between two curves."
+      ]
+    },
+    {
+      "unit_number": 7,
+      "unit_name": "Computational methods",
+      "is_alternative": true,
+      "alternative_to": "Mechanics",
+      "topics": [
+        "7.1 Solve algebraic equation and transcendental equation by bisection method, Newton-Raphson method and find approximate error by these methods.",
+        "7.2 Integrate numerically by trapezoidal rule and Simpson's rule."
+      ]
+    },
+    {
+      "unit_number": 7,
+      "unit_name": "Mechanics",
+      "is_alternative": true,
+      "alternative_to": "Computational methods",
+      "topics": [
+        "7.1 Find resultant forces by parallelogram of forces.",
+        "7.2 Solve the problems related to composition and resolution of forces.",
+        "7.3 Obtain resultant of coplanar forces/vectors acting on a point.",
+        "7.4 Solve the problems of motion of particle in a straight line, motion with uniform acceleration, motion under the gravity, motion in a smooth inclined plane."
+      ]
+    }
+  ]
+}
