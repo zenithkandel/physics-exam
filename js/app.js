@@ -538,8 +538,8 @@ function renderSyllabus() {
     const unitEl = getEl("unit-" + uIdx);
     if (unitEl && !unitEl.classList.contains("show")) {
       unitEl.classList.add("show");
-      expandedUnits[uIdx] = true;
-      localStorage.setItem("chemcrash_expanded", JSON.stringify(expandedUnits));
+expandedUnits[uIdx] = true;
+    localStorage.setItem("mathscrash_expanded", JSON.stringify(expandedUnits));
     }
     setTimeout(() => {
       const chapterEl = document.querySelector(`[data-chapter-idx="${scrollTarget}"]`);
@@ -558,12 +558,10 @@ function toggleUnit(idx) {
   if (el) {
     const isExpanded = el.classList.contains("show");
     if (isExpanded) {
-      delete expandedUnits[idx];
-    } else {
-      expandedUnits[idx] = true;
+delete expandedUnits[idx];
     }
     el.classList.toggle("show");
-    localStorage.setItem("chemcrash_expanded", JSON.stringify(expandedUnits));
+    localStorage.setItem("mathscrash_expanded", JSON.stringify(expandedUnits));
   }
 }
 
