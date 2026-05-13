@@ -16,9 +16,8 @@ function getEl(id) { return document.getElementById(id); }
 
 async function loadData() {
   try {
-    const [qRes, dRes, sRes] = await Promise.all([
+    const [qRes, sRes] = await Promise.all([
       fetch("data/maths.json"),
-      fetch("data/maths-syllabus.json"),
       fetch("data/maths-data.json")
     ]);
     const qData = await qRes.json();
