@@ -386,6 +386,7 @@ function selectAnswer(chosenIndex, clickedBtn) {
   if (optionsGrid) optionsGrid.querySelectorAll(".option-btn").forEach(b => b.classList.add("locked"));
   if (skipBtn) skipBtn.style.display = "none";
   updateStats();
+  saveQuizState();
   setTimeout(() => {
     quizActive = true;
     if (quizContainer) quizContainer.classList.remove("correct-flash", "wrong-flash");
@@ -411,6 +412,7 @@ function endQuiz() {
   if (scoreMessage) scoreMessage.textContent = msg;
   if (qProgressFill) qProgressFill.style.width = "100%";
   updateStats();
+  clearQuizState();
 }
 
 function restartQuiz() {
