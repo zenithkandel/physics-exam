@@ -803,6 +803,29 @@ function init() {
 
     const searchInput = getEl("searchInput");
     const searchResults = getEl("searchResults");
+    
+    const mobileMenuBtn = getEl("mobileMenuBtn");
+    const sidebar = document.querySelector(".sidebar");
+    if (mobileMenuBtn && sidebar) {
+      mobileMenuBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+      });
+      // Close sidebar when clicking outside on mobile
+      document.addEventListener("click", (e) => {
+        if (!sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target) && sidebar.classList.contains("show")) {
+          sidebar.classList.remove("show");
+        }
+      });
+      // Close sidebar when navigating
+      document.querySelectorAll(".nav-item").forEach(btn => {
+        btn.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            sidebar.classList.remove("show");
+          }
+        });
+      });
+    }
+
     if (searchInput && searchResults) {
       searchInput.addEventListener("input", (e) => {
         const results = performSearch(e.target.value);
