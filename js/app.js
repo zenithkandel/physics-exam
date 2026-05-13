@@ -468,7 +468,7 @@ function renderSyllabus() {
     <div class="card-header">
       <div>
         <div class="card-title">Complete Syllabus</div>
-        <div class="card-subtitle">NEB Grade 11 Chemistry - All units and chapters</div>
+        <div class="card-subtitle">NEB Grade 11 Mathematics - All units and chapters</div>
       </div>
       <div class="syllabus-stats" id="syllabusStats">
         <span class="syllabus-progress-text"></span>
