@@ -803,7 +803,7 @@ function init() {
 
     const searchInput = getEl("searchInput");
     const searchResults = getEl("searchResults");
-    
+
     const mobileMenuBtn = getEl("mobileMenuBtn");
     const sidebar = document.querySelector(".sidebar");
     if (mobileMenuBtn && sidebar) {
