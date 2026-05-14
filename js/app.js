@@ -564,27 +564,45 @@ function toggleUnit(idx) {
 function toggleChapter(key, e) {
   e.stopPropagation();
   e.preventDefault();
+  const btn = e.currentTarget;
   const wasComplete = completedTopics[key] === true;
   if (wasComplete) {
     delete completedTopics[key];
+    btn.classList.remove("checked");
+    btn.querySelector("i").classList.remove("fa-check-circle");
+    btn.querySelector("i").classList.add("fa-circle");
   } else {
     completedTopics[key] = true;
+    btn.classList.add("checked");
+    btn.querySelector("i").classList.add("fa-check-circle");
+    btn.querySelector("i").classList.remove("fa-circle");
   }
   localStorage.setItem("mathscrash_completed", JSON.stringify(completedTopics));
-  renderSyllabus();
+  const chapterEl = btn.closest(".syllabus-chapter");
+  if (chapterEl) chapterEl.classList.toggle("completed", !wasComplete);
+  updateSyllabusStats();
 }
 
 function toggleTopic(key, e) {
   e.stopPropagation();
   e.preventDefault();
+  const btn = e.currentTarget;
   const wasComplete = completedTopics[key] === true;
   if (wasComplete) {
     delete completedTopics[key];
+    btn.classList.remove("checked");
+    btn.querySelector("i").classList.remove("fa-check-circle");
+    btn.querySelector("i").classList.add("fa-circle");
   } else {
     completedTopics[key] = true;
+    btn.classList.add("checked");
+    btn.querySelector("i").classList.add("fa-check-circle");
+    btn.querySelector("i").classList.remove("fa-circle");
   }
   localStorage.setItem("mathscrash_completed", JSON.stringify(completedTopics));
-  renderSyllabus();
+  const topicEl = btn.closest(".syllabus-topic");
+  if (topicEl) topicEl.classList.toggle("completed", !wasComplete);
+  updateSyllabusStats();
 }
 
 function updateSyllabusStats() {
@@ -825,8 +843,9 @@ function init() {
         sidebar.classList.toggle("show");
       });
       // Close sidebar when clicking outside on mobile
+      const mainContent = getEl("mainContent");
       document.addEventListener("click", (e) => {
-        if (!sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target) && sidebar.classList.contains("show")) {
+        if (!sidebar.contains(e.target) && !mobileMenuBtn.contains(e.target) && !mainContent?.contains(e.target) && sidebar.classList.contains("show")) {
           sidebar.classList.remove("show");
         }
       });
